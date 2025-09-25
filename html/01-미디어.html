@@ -5,31 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>01-미디어</title>
   </head>
-  <body>
+  <body style="margin: 0">
     <!-- 주석: [Ctrl] + [/] -->
     <!-- 커서 위치에 주석 추가: [Shift] + [Alt] + [A] -->
     <!-- !tab: emmet -->
     <!-- https://docs.emmet.io/cheat-sheet/ -->
     <!-- h1+p+a+img 탭 -->
+    <h1 style="background-color: yellow">제목</h1>
     <h1>제목</h1>
+    <p style="border: 5px solid red">본문 텍스트 입니다.</p>
     <p>본문 텍스트 입니다.</p>
-    <a href="https://github.com/kahyou22/jfs">마이 깃허브 사이트</a>
+    <a
+      style="text-decoration: none; color: red; font-size: 32px"
+      href="https://github.com/kahyou22/jfs"
+      >마이 깃허브 사이트</a
+    >
     <img src="logo.png" alt="대체 텍스트" />
-    <img src="logo.svg" alt="대체 텍스트" />
+    <img
+      src="logo.svg"
+      alt="대체 텍스트"
+      style="border: 1px solid gray; transform: rotate(45deg)"
+    />
     <img src="esbuild.svg" alt="대체 텍스트" />
     <!-- 순서 없는 목록 -->
     <!-- ul>li*5 -->
-    <ul>
+    <ul style="list-style: none">
       <li>아메리카노</li>
       <li>카페라떼</li>
-      <li>카페모카</li>
-      <li>카푸치노</li>
+      <li style="font-style: italic">카페모카</li>
+      <li style="font-weight: 700">카푸치노</li>
       <li>펩시 제로 슈거</li>
     </ul>
     <!-- 순서 있는 목록 -->
     <!-- ol>li*3 -->
+    <h2 style="border: 3px solid red">올림픽 양궁 순위</h2>
     <h2>올림픽 양궁 순위</h2>
-    <ol>
+    <ol style="line-height: 2">
       <li>한국</li>
       <li>미국</li>
       <li>????</li>
@@ -44,5 +55,34 @@
       alt="강사 Github 프로필 이미지"
       style="width: 100px"
     />
+    <!-- https://developer.mozilla.org/ko/docs/Web/HTML/Reference/Elements/video -->
+    <video autoplay muted loop controls height="100">
+      <source
+        src="https://8c17761c-8f0b-42c0-a61d-08defc6676e0.mdnplay.dev/shared-assets/videos/flower.webm"
+        type="video/webm"
+      />
+      <source
+        src="https://8c17761c-8f0b-42c0-a61d-08defc6676e0.mdnplay.dev/shared-assets/videos/flower.mp4"
+        type="video/mp4"
+      />
+    </video>
+    <!-- https://www.w3schools.com/html/html5_video.asp -->
+    <video
+      src="https://www.w3schools.com/html/mov_bbb.mp4"
+      autoplay
+      muted
+      loop
+      height="100"
+    ></video>
+    <hr />
+    <video
+      autoplay
+      muted
+      loop
+      style="width: 100%; height: 100vh; object-fit: cover"
+    >
+      <source src="main_video1.mp4" type="video/mp4" />
+      브라우저에서 video 태그를 지원하지 않음
+    </video>
   </body>
 </html>
