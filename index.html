@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>정문주</title>
   </head>
-  <body>
+  <body style="background-color: #f7f7f7">
     <h1>개인 사이트</h1>
     <p>나의 개인 사이트 입니다.</p>
     <!-- nav>ul>li*2>a[href] -->
@@ -15,5 +15,53 @@
         <li><a href="sub.html">About me</a></li>
       </ul>
     </nav>
+    <!-- UI Card -->
+    <div
+      style="
+        font-family: 'Noto Sans KR', sans-serif;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 360px;
+        min-height: 100vh;
+        padding: 20px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-left: 5px solid #9b59b6;
+      "
+    >
+      <!-- 상단 썸네일 이미지 -->
+      <div style="height: 250px">
+        <img
+          src="https://www.honorsville.co.kr/upload/temp/20255303432444.jpg"
+          alt="충주연수 경남아너스빌 센터원"
+          style="width: 100%; height: 100%; object-fit: cover; display: block"
+        />
+      </div>
+      <!-- 콘텐츠 -->
+      <div style="padding: 10px 20px 30px">
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 5px;
+          "
+        >
+          <span>분양중</span>
+          <button>❤</button>
+        </div>
+        <h3>충주연수 경남아너스빌 센터원</h3>
+        <div>
+          <p>충청북도 충주시 연수동 787-25 일원</p>
+          <p>243세대</p>
+        </div>
+        <div>
+          <p>1866-0234</p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
