@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 선택자</title>
+    <style>
+      * {
+        border: 1px solid red;
+      }
+
+      html,
+      body,
+      h1,
+      ul,
+      li {
+        border: 1px solid red;
+      }
+
+      li {
+        color: orange;
+      }
+      .li {
+        color: darkcyan;
+      }
+      #li {
+        color: darkkhaki;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS 선택자</h1>
+    <ul>
+      <li>태그 선택자</li>
+      <li id="li" class="li li2 li3">아이디 선택자</li>
+      <li class="li">클래스 선택자</li>
+      <li id="li2">그룹 선택자</li>
+      <li>전체 선택자</li>
+    </ul>
+  </body>
+</html>

@@ -107,17 +107,18 @@
         z-index: 10;
       }
 
+      /* 클래스 이름이 like-button에 해당하는 태그에 마우스를 올리면 */
       .like-button:hover {
-        background-color: #b3b3b3;
+        background-color: #e10d0d;
       }
 
       /* Add a heart shape using a pseudo-element */
       .like-button::after {
-        content: "";
+        content: "❤";
         display: block;
         width: 18px;
         height: 18px;
-        background-color: white;
+        background-color: blue;
         border-radius: 50%;
       }
 
