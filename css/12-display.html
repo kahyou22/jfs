@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS: display</title>
+    <style>
+      /* 
+        display: 표시방식;
+          block
+          inline
+          inline-block: 인라인이면서 블록 성격을 가짐
+          none: 없음
+       */
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>display</h1>
+      <p>
+        Lorem <span>ipsum</span> dolor sit amet consectetur
+        <b>adipisicing</b> elit. Ullam <i>quaerat</i> eveniet sint <br />
+        recusandae dicta ipsum accusantium aliquam, saepe, asperiores pariatur
+        qui vel eos tempora velit, sunt maxime alias. Quas, laboriosam.
+      </p>
+      <header>
+        <nav>
+          <ul>
+            <li><a href="https://kahyou22.github.io/jfs">개인 사이트</a></li>
+            <li><a href="mailto:hong@naver.com">hong@naver.com</a></li>
+            <li><a href="tel:000-0000-0000">000-0000-0000</a></li>
+            <li><a href="index.html">파일</a></li>
+            <li><a href="#sec">현재 페이지</a></li>
+          </ul>
+        </nav>
+      </header>
+      <section id="sec">
+        <h2>block vs inline</h2>
+        <figure>
+          <img src="/assets/images/logo.svg" alt="피그마 로고" />
+          <figcaption>이미지 설명글 (캡션)</figcaption>
+        </figure>
+        <video muted autoplay loop>
+          <source src="/assets/videos/main_video1.mp4" type="video/mp4" />
+        </video>
+        <audio
+          src="https://2daec756-f663-4edc-8d38-2f7b209d0322.mdnplay.dev/shared-assets/audio/t-rex-roar.mp3"
+        ></audio>
+      </section>
+      <footer>
+        <address>주소 및 연락처</address>
+      </footer>
+    </div>
+  </body>
+</html>

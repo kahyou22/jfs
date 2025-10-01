@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS: 박스모델</title>
+    <style>
+      /*
+        padding: 패딩;
+
+        padding-top
+        padding-right
+        padding-bottom
+        padding-left
+       */
+
+      .box {
+        /* 개별 속성 */
+        padding-top: 100px;
+        padding-right: 150px;
+        padding-bottom: 100px;
+        padding-left: 150px;
+        /* 속기 속성 (Shorthand Property) */
+        /* padding: 상 우 하 좌 */
+        padding: 100px 150px 80px 150px;
+        /* padding: 상하 좌우 */
+        padding: 100px 150px;
+        /* padding: 상 좌우 하 */
+        padding: 100px 150px 80px;
+        /* padding: 상하좌우 */
+        padding: 20px;
+        /* 참고: 음수 지정 x */
+        background-color: darkgoldenrod;
+
+        /* span의 패딩과 div의 아래 여백이 겹침 발생 */
+        margin-bottom: 30px;
+      }
+
+      span {
+        /* 인라인 요소의 상하 margin은 적용x */
+        margin: 100px;
+        padding: 20px;
+        background-color: darkgoldenrod;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="box">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit
+      voluptates doloribus dolore reiciendis, cum ab inventore illum iusto fuga
+      id rerum et ullam nulla quia numquam? Tenetur excepturi error perferendis!
+    </p>
+    <span class="box">Lorem ipsum</span>
+  </body>
+</html>

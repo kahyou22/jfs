@@ -12,6 +12,7 @@
         /* vw, vmax, vmin */
         /* vh: viewport height */
         height: 100vh;
+        margin: 0;
       }
 
       /* 
@@ -23,15 +24,11 @@
         - 같은 선택자이면 아래 기록한 것이 적용
         - 같은 속성일때 아래 기록한 것이 적용
        */
-      .div2 {
-        width: 1200px;
-        background-color: darkcyan;
-      }
 
       div {
         /* 단위: px은 고정, %는 부모 기준 */
         /* 부모 (body) 너비의 50% */
-        width: 50%;
+        /* width: 50%; */
         height: 200px;
         background-color: powderblue;
       }
@@ -42,12 +39,18 @@
       }
 
       .div1 {
-        width: 50%;
+        width: 100%;
         max-width: 1200px;
+        margin: 0 auto;
         /* min-width: 500px; */
         /* max-height: 500px; */
         /* min-height: 500px; */
-        background-color: cadetblue;
+        background-color: deeppink;
+      }
+
+      .div2 {
+        width: 600px;
+        background-color: palegreen;
       }
     </style>
   </head>

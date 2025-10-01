@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS: 박스모델</title>
+    <style>
+      /* 
+        속기 속성
+          border: [두께] <스타일> [색];
+          border-width: 값 [값] [값] [값]
+            - px
+            - medium (기본값), thin, thick
+          border-style: 값 [값] [값] [값]
+            - none (기본값), hidden, dotted, dashed, solid, ...
+          border-color: 값 [값] [값] [값]
+
+          border-top
+          border-right
+          border-bottom
+          border-left
+
+          border-width: medium;
+          border-style: 스타일; -> 필수
+          border-color: 글자색;
+
+        개별 속성
+          border-top-width
+          border-right-width
+          border-bottom-width
+          border-left-width
+
+          border-top-style
+          border-right-style
+          border-bottom-style
+          border-left-style
+
+          border-top-color
+          border-right-color
+          border-bottom-color
+          border-left-color
+
+       */
+
+      div,
+      p {
+        width: 100px;
+        height: 100px;
+        margin: 20px;
+        background-color: #efefef;
+      }
+
+      .box1 {
+        border: solid;
+      }
+
+      .box2 {
+        border-bottom: 1px solid #000;
+
+        border-bottom-width: 5px;
+        border-bottom-style: dashed;
+        border-bottom-color: red;
+      }
+
+      p.dotted {
+        border-style: dotted;
+      }
+      p.dashed {
+        border-style: dashed;
+      }
+      p.solid {
+        border-style: solid;
+      }
+      p.double {
+        border-style: double;
+      }
+      p.groove {
+        border-style: groove;
+      }
+      p.ridge {
+        border-style: ridge;
+      }
+      p.inset {
+        border-style: inset;
+      }
+      p.outset {
+        border-style: outset;
+      }
+      p.none {
+        border-style: none;
+      }
+      p.hidden {
+        border-style: hidden;
+      }
+      p.mix {
+        /* 상 우 하 좌 */
+        border-style: dotted dashed solid double;
+
+        /* 상 좌우 하 */
+        /* border-style: solid dashed dotted; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">박스1</div>
+    <div class="box2">박스2</div>
+    <p class="dotted">dotted</p>
+    <p class="dashed">dashed</p>
+    <p class="solid">solid</p>
+    <p class="double">double</p>
+    <p class="groove">groove</p>
+    <p class="ridge">ridge</p>
+    <p class="inset">inset</p>
+    <p class="outset">outset</p>
+    <p class="none">none</p>
+    <p class="hidden">hidden</p>
+    <p class="mix">mix</p>
+  </body>
+</html>
