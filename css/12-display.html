@@ -7,11 +7,78 @@
     <style>
       /* 
         display: 표시방식;
-          block
-          inline
+          block: 
+            1. 줄 바꿈(세로 배치: 위에서 아래)
+            2. width: 100%; height: 콘텐츠크기;
+            3. 크기 조절, 여백(margin, padding), 테두리(border) ⭕
+              -> 마진 겹침 주의!
+            4. 태그 종류: html, body, div(header, section, footer,
+              nav, ...), h1~h6, p, ul, figure, figcaption, address
+
+          list-item: li 
+
+          inline: 
+            1. 줄 바꿈❌(가로 배치: 왼쪽에서 오른쪽)
+              -> 부모 요소의 크기가 콘텐츠 보다 작으면 줄 바꿈된다.
+            2. width: 콘텐츠크기; height: 콘텐츠크기;
+            3. 패딩과 테두리⭕
+            4. 크기 조절, 위/아래margin ❌ 
+              -> 예외: img, video, iframe 크기 조절 가능!
+            5. 태그 종류: span, b, i, br, a, img, video
+
           inline-block: 인라인이면서 블록 성격을 가짐
-          none: 없음
+            1. 줄 바꿈❌(가로 배치: 왼쪽에서 오른쪽)
+              -> 부모 요소의 크기가 콘텐츠 보다 작으면 줄 바꿈된다.
+            2. width: 콘텐츠크기; height: 콘텐츠크기;
+            3. 크기 조절, 여백(margin, padding), 테두리(border) ⭕
+              -> 마진 겹침 없다.
+            4. 태그 종류: button
+
+          none: 없음, audio
        */
+
+      /* 페이지에 있는 모든 요소 */
+      body * {
+        outline: 1px solid lime;
+        /* out */
+        width: 500px;
+        /* w500 */
+      }
+
+      /* p안에 들어있는 모든 요소 */
+      p *,
+      a,
+      img,
+      video,
+      button {
+        outline: 2px solid red;
+      }
+
+      /* 
+        CSS가 적용되는 우선 순위
+          1. id > class > 태그
+          2. 같은 선택자 끼리는 아래 기록한 것이 적용!
+       */
+
+      #btn {
+        width: 500px;
+        height: 600px;
+        margin-top: 500px;
+        background-color: lawngreen;
+        outline: none;
+        line-height: 1;
+      }
+
+      #btn button {
+        width: auto; /* wa */
+        /* width: 120px;
+        height: 40px; */
+        padding: 13px 46px;
+        border: 1px solid red;
+        margin: 10px;
+        line-height: 1;
+        outline: none;
+      }
     </style>
   </head>
   <body>
@@ -50,6 +117,10 @@
       <footer>
         <address>주소 및 연락처</address>
       </footer>
+      <div id="btn">
+        <button>버튼</button><button>버튼</button><button>버튼</button
+        ><button>버튼</button><button>버튼</button>
+      </div>
     </div>
   </body>
 </html>
