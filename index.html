@@ -3,25 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>정문주</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>홍길동</title>
+    <!-- 외부 스타일: link 태그로 css파일을 연결 -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style2.css" />
   </head>
-  <body style="background-color: #f7f7f7">
-    <!-- header (헤더) area -->
+
+  <body>
+    <!-- header(헤더) area -->
+    <!-- 
+        정보 구조(IA) 설계
+            메인 페이지1: Home
+                -> index.html
+            서브 페이지2: about me, my story
+                -> about.html
+            서브 페이지3: work(portfolio, project)
+                -> work.html
+            서브 페이지4: contact us
+                -> contact.html
+    -->
+    <!-- shift+alt+f -->
     <header>
+      <!-- 로고 -->
       <!-- h1.logo>a[href=index.html] -->
       <h1 class="logo"><a href="index.html">Home</a></h1>
+      <!-- 내비게이션: GNB -->
       <nav>
         <ul>
+          <!-- shift+alt+방향키 -->
           <li><a href="about.html">About me</a></li>
           <li><a href="work.html">Work</a></li>
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </nav>
     </header>
-    <!-- section (본문) area -->
+
+    <!-- section(본문) area -->
     <!-- https://www.honorsville.co.kr/ -->
+
+    <!-- card-container -->
     <div class="card-container">
+      <!-- card-image-wrapper -->
       <div class="card-image-wrapper">
         <img
           src="https://www.honorsville.co.kr/upload/temp/20255303432444.jpg"
@@ -30,29 +52,34 @@
         />
         <!-- <img src="apartment-complex.jpg" alt="충주연수 경남아너스빌 센터원 아파트 외관" class="card-image"> -->
       </div>
+      <!-- .card-image-wrapper -->
 
+      <!-- card-content -->
       <div class="card-content">
         <div class="card-header">
           <span class="tag-badge">분양중</span>
-          <!-- 폼 요소: 회원가입, 로그인, 게시판, 상품구매 및 결재 -->
-          <button class="like-button" aria-label="관심 단지로 추가"></button>
+          <span class="like-button"><i class="fa-solid fa-heart"></i></span>
         </div>
 
-        <h2 class="card-title">충주연수 경남아너스빌 센터원</h2>
-
-        <div class="card-details">
-          <p>충청북도 충주시 연수동 787-25 일원</p>
-          <p>243세대</p>
-        </div>
-
-        <div class="card-contact">
-          <p class="phone-number">1866-0234</p>
+        <div class="card-body">
+          <h3 class="card-title">충주연수 경남아너스빌 센터원</h3>
+          <div class="card-details">
+            <p>충청북도 충주시 연수동 787-25 일원</p>
+            <p>243세대</p>
+          </div>
+          <div class="card-contact">
+            <p class="phone-number">1866-0234</p>
+          </div>
+          <!-- .card-contact -->
         </div>
       </div>
+      <!-- .card-content -->
     </div>
-    <!-- footer (푸터) area -->
+    <!-- .card-container -->
+
+    <!-- footer(푸터) area -->
     <footer>
-      <p>&copy; 2025 Jeong Munju. All rights reserved.</p>
+      <p>&copy; 2025 HGD. All rights reserved.</p>
     </footer>
   </body>
 </html>

@@ -1,0 +1,140 @@
+@charset "utf-8"; /* @ch */
+/* CDN(콘텐트 전송 네트워크, Content Delivery Network)은 지리적으로 분산된 서버 네트워크를 통해 웹 콘텐츠(예: 웹사이트, 이미지, 동영상)를 사용자와 가장 가까운 곳에서 전달하여 전송 속도를 높이고, 웹사이트 성능을 향상시키는 기술입니다. */
+/* https://cdnjs.com */
+/* font awesome 소스 코드 */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"); /* @i */
+/* 1. 웹(외부) 폰트를 CDN으로 연결 */
+/* 눈누 */
+@import url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css");
+/* 구글 */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+
+/* common */
+* {
+  box-sizing: border-box; /* bx */
+}
+img {
+  vertical-align: top; /* vat */
+}
+
+/* 
+    typo/color system    
+        - 큰제목   22px, #333
+        - 배지     15px, #fff
+        - 본문     15px, #9a8b86, 나눔스쿼어, 1.6
+        - 연락처   24px, #0f2244, Noto Sans KR
+
+        font-family: 글꼴;
+        line-height: 줄간격;
+        font-size: 글자크기;
+        color: 글자색;
+        font-weight: 글자굵기;
+*/
+
+/* 
+    구글 폰트
+        https://fonts.google.com/
+    눈누 폰트
+        https://noonnu.cc/
+*/
+
+body {
+  /* 2. font-family 속성으로 지정 */
+  /* 글꼴은 하위 요소에 상속해 준다. */
+  /* font-family: 값1, 값2, 값3, ...; */
+  font-family: "NanumSquare", sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #9a8b86;
+}
+.card-title {
+  font-size: 22px;
+  color: #333;
+  line-height: 27px;
+}
+.card-details p {
+  /* p는 위아래 기본 마진이 있다. 폰트 크기의 1em */
+  margin: 0;
+}
+
+.phone-number {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 24px; /* fz24 */
+  color: #0f2244;
+  font-weight: bold; /* fwb */
+}
+
+/* header */
+/* section */
+
+/* card-container */
+/* 배경색: bgc */
+.card-container {
+  width: 340px;
+  background-color: #edf5f7;
+  /* overflow: hidden; */
+}
+
+.card-image-wrapper {
+  overflow: hidden; /* o */
+}
+.card-image-wrapper img {
+  transition: 0.3s; /* trs, 0.3초 */
+}
+.card-image-wrapper:hover img {
+  /* transform: scale(너비, 높이), 기본값 1 */
+  transform: scale(1.2, 1.2); /* trf:s */
+}
+
+.card-content {
+  /* 마진 겹침 해결!
+        -> 마진이 부모 바깥으로 지정되는 것을 방지
+     */
+  display: flow-root;
+}
+
+/* 배지+좋아요 */
+.card-header {
+  padding-left: 45px; /* pl45 */
+}
+
+.card-header span {
+  /* 인라인 요소를 위로 맞춤 */
+  vertical-align: top; /* vat */
+}
+
+.tag-badge {
+  display: inline-block; /* dib */
+  width: 70px; /* w70 */
+  height: 38px; /* h38 */
+  line-height: 38px; /* lh38px */
+  text-align: center; /* tac */
+  background-color: #0f2244; /* bgc */
+  color: #fff; /* c */
+}
+
+/* 좋아요 하트 */
+.like-button {
+  /* 요소의 크기는 지정하면서 줄은 바뀌지 않는다. */
+  display: inline-block; /* dib */
+  width: 55px; /* w55 */
+  height: 55px; /* h55 */
+  line-height: 55px; /* 줄간격, lh55px */
+  text-align: center; /* 텍스트 좌우 정렬, tac */
+  /* padding: 16px 15px 24px; */
+  border-radius: 50%; /* bdrs50p */
+  margin-top: 20px;
+  margin-left: 145px;
+  background-color: #b1b4b3; /* bgc */
+}
+.like-button i {
+  color: #fff; /* 글자 색, c */
+  font-size: 20px; /* 글자 크기, fz20 */
+}
+
+/* 카드 UI 정보 */
+.card-body {
+  margin: 0 45px 120px; /* m0-45-120 */
+}
+
+/* footer */
