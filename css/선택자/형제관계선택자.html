@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 선택자</title>
+  </head>
+  <style>
+    /*
+      형제 관계 선택자
+        형선택자 + 제선택자: 바로 다음에 오는 제선택자
+        형선택자 ~ 제선택자: 형제 관계에 있는 모든 제선택자
+     */
+    h1 + p {
+      color: red;
+    }
+    h1 ~ p {
+      border: 1px solid blue;
+    }
+  </style>
+  <body>
+    <div>
+      <h1>형제 관계 선택자</h1>
+      <h2>형제 선택자</h2>
+      <p>나는 1번째 문단이다.</p>
+      <p>나는 2번째 문단이다.</p>
+      <h2>인접 형제 선택자</h2>
+      <p>나는 3번째 문단이다.</p>
+      <p>나는 4번째 문단이다.</p>
+      <p>나는 5번째 문단이다.</p>
+    </div>
+  </body>
+</html>
