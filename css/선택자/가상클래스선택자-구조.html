@@ -8,29 +8,126 @@
   <style>
     /*
       가상 클래스 선택자
+        자식 요소의 타입을 구분하지 않음
         :nth-child(n)
+        :nth-last-child(n)
+        :first-child
+        :last-child
+        :only-child
+
+        자식 요소의 타입을 구분함
         :nth-of-type(n)
+        :nth-last-of-type(n)
+        :first-of-type
+        :last-of-type
+        :only-of-type
+
+
+        :empty 내용 없이 비어있는 요소
      */
+
+    /* p 요소 중 첫 번째 선택 */
     p:nth-of-type(1) {
+      text-decoration: underline;
+    }
+    p:first-of-type {
+      text-decoration: underline;
+    }
+
+    /* 첫 번째 자식 요소 중 p 요소 선택 */
+    p:nth-child(1) {
+      font-style: italic;
+    }
+    p:first-child {
+      font-style: italic;
+    }
+
+    /* p 요소 중 마지막 번째 선택 */
+    p:nth-last-of-type(1) {
+      text-decoration: underline;
+    }
+    p:last-of-type {
+      text-decoration: underline;
+    }
+
+    /* 마지막 번째 자식 요소 중 p 요소 선택 */
+    p:nth-last-child(1) {
+      font-style: italic;
+    }
+    p:last-child {
+      font-style: italic;
+    }
+
+    /* p 요소 중 짝수 번째 선택 */
+    p:nth-of-type(even) {
       color: red;
     }
-    h1 + p {
+    p:nth-of-type(2n) {
       color: red;
     }
-    h1 ~ p {
-      border: 1px solid blue;
+
+    /* 짝수 번째 자식 요소 중 p 요소 선택 */
+    p:nth-child(even) {
+      background-color: yellow;
+    }
+    p:nth-child(2n) {
+      background-color: yellow;
+    }
+
+    /* p 요소 중 홀수 번째 선택 */
+    p:nth-of-type(odd) {
+      color: blue;
+    }
+    p:nth-of-type(2n + 1) {
+      color: blue;
+    }
+    p:nth-of-type(2n - 1) {
+      color: blue;
+    }
+
+    /* 홀수 번째 자식 요소 중 p 요소 선택 */
+    p:nth-child(odd) {
+      font-size: 40px;
+    }
+    p:nth-child(2n + 1) {
+      font-size: 40px;
+    }
+    p:nth-child(2n - 1) {
+      font-size: 40px;
+    }
+
+    /* div 자식 요소중 단 하나인 요소 */
+    div h2:only-of-type {
+      border-left: 10px solid red;
+    }
+    div h2:only-child {
+      border-right: 10px solid blue;
+    }
+
+    div:empty {
+      display: block;
+      width: 200px;
+      height: 100px;
+      border: 1px solid red;
     }
   </style>
   <body>
     <div>
-      <h1>형제 관계 선택자</h1>
-      <h2>형제 선택자</h2>
-      <p>나는 1번째 문단이다.</p>
-      <p>나는 2번째 문단이다.</p>
-      <h2>인접 형제 선택자</h2>
-      <p>나는 3번째 문단이다.</p>
-      <p>나는 4번째 문단이다.</p>
-      <p>나는 5번째 문단이다.</p>
+      <h2>형제 관계 선택자</h2>
+      <!-- <p>나는 1번째 문단이다.</p> -->
+    </div>
+    <div></div>
+    <p></p>
+    <div>
+      <h1>1) 가상 클래스 선택자</h1>
+      <h2>2) ~of-type</h2>
+      <p>3) ~of-type은 태그 종류 (즉, 타입)을 구별한다.</p>
+      <p>4) 나는 2번째 문단이다.</p>
+      <h2>5) ~child</h2>
+      <p>6) ~child는 태그 종류를 구별하지 않는다</p>
+      <p>7) 나는 4번째 문단이다.</p>
+      <p>8) 나는 5번째 문단이다.</p>
+      <p>9) 나는 6번째 문단이다.</p>
     </div>
   </body>
 </html>

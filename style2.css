@@ -67,12 +67,18 @@ body {
 /* header */
 /* section */
 
+#section {
+  display: flex;
+  justify-content: center;
+}
+
 /* card-container */
 /* 배경색: bgc */
 .card-container {
   width: 340px;
   background-color: #edf5f7;
   /* overflow: hidden; */
+  margin: 20px;
 }
 
 .card-image-wrapper {
