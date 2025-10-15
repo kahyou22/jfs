@@ -1,0 +1,20 @@
+@charset "utf-8"; /* @ch */
+/* common */
+* {
+  box-sizing: border-box; /* bx */
+}
+body,
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+}
+img {
+  vertical-align: top; /* vat */
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
