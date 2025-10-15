@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS: Flexbox</title>
+    <style>
+      /*
+        flex-wrap
+          플렉스 아이템의 줄바꿈
+          (조건) 플렉스 컨테이너의 너비보다 플렉스
+          아이템이 많아서 넘쳐야 한다.
+          기본값은 nowrap이고, wrap, wrap-reverse가 있다.
+       */
+      .flex-container {
+        display: flex;
+        background-color: dodgerblue;
+        /* gap: 10px; */
+        /* height: 100px; */
+        margin: 20px;
+      }
+
+      .flex-container.fx2 {
+        flex-wrap: wrap;
+      }
+
+      .flex-container.fx3 {
+        flex-wrap: wrap-reverse;
+      }
+
+      .flex-container div {
+        padding: 10px;
+        margin: 10px;
+        background-color: #f1f1f1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container fx1">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+    </div>
+    <div class="flex-container fx2">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+    </div>
+    <div class="flex-container fx3">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+    </div>
+  </body>
+</html>

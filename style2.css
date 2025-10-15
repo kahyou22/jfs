@@ -66,10 +66,18 @@ body {
 
 /* header */
 /* section */
-
-#section {
+/* section common(공통) */
+.sec {
   display: flex;
   justify-content: center;
+  height: 100vh;
+}
+
+#sec2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 /* card-container */
@@ -78,7 +86,7 @@ body {
   width: 340px;
   background-color: #edf5f7;
   /* overflow: hidden; */
-  margin: 20px;
+  /* margin: 20px; */
 }
 
 .card-image-wrapper {

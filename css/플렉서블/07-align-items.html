@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS: Flexbox</title>
+    <style>
+      /*
+        align-items
+          교차의 정렬
+          기본값은 normal(stretch)
+            stretch: 플렉스 아이템의 크기가 부모 크기의 100%로 지정
+            flex-start: 플렉스 아이템을 시작 기준 배치
+            flex-end: 플렉스 아이템을 끝 기준 배치
+            center: 플렉스 아이템을 가운데 배치
+            baseline: 텍스트의 기준선을 기준으로 배치
+       */
+      .flex-container {
+        display: flex;
+        height: 300px;
+        /* flex-direction: column; */
+        background-color: dodgerblue;
+        margin: 20px;
+      }
+
+      .flex-container.fx1 {
+        align-items: flex-start;
+      }
+
+      .flex-container.fx2 {
+        align-items: flex-end;
+      }
+
+      .flex-container.fx3 {
+        align-items: center;
+      }
+
+      .flex-container.fx4 {
+        align-items: stretch;
+      }
+
+      .flex-container.fx5 {
+        align-items: baseline;
+      }
+
+      .flex-container.fx5 div:nth-of-type(1) {
+        font-size: 80px;
+      }
+
+      .flex-container.fx5 div:nth-of-type(2) {
+        font-size: 20px;
+      }
+
+      .flex-container.fx5 div:nth-of-type(3) {
+        font-size: 100px;
+      }
+
+      .flex-container div {
+        width: 100px;
+        padding: 10px;
+        margin: 10px;
+        background-color: #f1f1f1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container fx1">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <div class="flex-container fx2">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <div class="flex-container fx3">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <div class="flex-container fx4">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <div class="flex-container fx5">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+  </body>
+</html>
