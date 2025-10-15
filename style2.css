@@ -1,36 +1,6 @@
 @charset "utf-8"; /* @ch */
 @import url(common.css);
-
-/* CDN(콘텐트 전송 네트워크, Content Delivery Network)은 지리적으로 분산된 서버 네트워크를 통해 웹 콘텐츠(예: 웹사이트, 이미지, 동영상)를 사용자와 가장 가까운 곳에서 전달하여 전송 속도를 높이고, 웹사이트 성능을 향상시키는 기술입니다. */
-/* https://cdnjs.com */
-/* font awesome 소스 코드 */
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"); /* @i */
-/* 1. 웹(외부) 폰트를 CDN으로 연결 */
-/* 눈누 */
-@import url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css");
-/* 구글 */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
-
-/* 
-    typo/color system    
-        - 큰제목   22px, #333
-        - 배지     15px, #fff
-        - 본문     15px, #9a8b86, 나눔스쿼어, 1.6
-        - 연락처   24px, #0f2244, Noto Sans KR
-
-        font-family: 글꼴;
-        line-height: 줄간격;
-        font-size: 글자크기;
-        color: 글자색;
-        font-weight: 글자굵기;
-*/
-
-/* 
-    구글 폰트
-        https://fonts.google.com/
-    눈누 폰트
-        https://noonnu.cc/
-*/
+@import url(typo.css);
 
 body {
   /* 2. font-family 속성으로 지정 */

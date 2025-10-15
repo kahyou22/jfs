@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>텍스트 스타일</title>
+    <style>
+      h1 {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 1.5em;
+        color: red;
+        font-style: italic;
+        font-weight: lighter;
+        text-align: right;
+
+        /* 속기 속성 */
+        /* font는 속성 값의 순서가 있다. */
+        /* font: [스타일] 크기[/줄간격] 글꼴; */
+        font: bold italic 2em/1.5 "Segoe UI", sans-serif;
+        font: 2em "Segoe UI", sans-serif;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 1.5;
+        text-align: justify;
+        /* Q. 단어 사이가 떨어지는 현상 방지 방법은? */
+        word-break: break-all; /* 단어 단위 줄 바꿈이 글자 단위 줄 바꿈으로 바뀐다. */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Text Style</h1>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium
+      modi, praesentium nobis est, ducimus sed amet non et saepe sit, molestias
+      hic repudiandae dolorum quo ex quasi architecto veritatis perferendis!
+    </p>
+  </body>
+</html>
