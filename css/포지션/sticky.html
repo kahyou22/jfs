@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sticky</title>
+    <style>
+      body {
+        height: 2000vh;
+      }
+      /* 
+        position: 위치
+          기본값: static;
+          relative
+            - static과 같지만 left,top,right,bottom을 사용
+            - left,top,right,bottom의 기준은? 자기 자신
+               -> left, top, right, bottom을 지정하지 않았을 때의 위치
+                  즉 원래 위치
+          absolute
+          - left,top,right,bottom의 기준은?
+             -> position이 static이 아닌 조상(부모)
+          fixed
+            - left,top,right,bottom의 기준은? 뷰포트
+          sticky
+            - 처음은 relative처럼 동작하다가 top의 위치에 도달하면 fixed와 같아진다.
+        
+        left
+        right
+        top
+        bottom
+       */
+      .parent {
+        position: sticky;
+        top: 0;
+        width: 400px;
+        height: 300px;
+        border: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, cum quod
+      dolor unde nam aut quaerat nobis sed temporibus veritatis ipsa eveniet
+      adipisci excepturi! Qui excepturi eligendi iusto error neque?
+    </p>
+    <div class="parent"></div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quisquam
+      cumque quos sapiente, doloribus nihil tempore veritatis nam rerum voluptas
+      nesciunt impedit eligendi eos doloremque laudantium nisi sed adipisci
+      reiciendis nulla, eius itaque laboriosam magni quidem. Provident molestiae
+      illo voluptate aspernatur, adipisci ipsa iste ullam odio atque neque earum
+      nihil optio totam debitis eaque impedit quae! Eveniet numquam expedita ex
+      ad accusamus doloremque fuga, beatae error ratione doloribus itaque optio
+      similique dolor quasi dolorem non voluptatem unde inventore sapiente quae
+      maxime officiis est maiores. Animi numquam facilis voluptas veniam
+      similique in distinctio dolorem nobis suscipit impedit neque repellendus,
+      facere at.
+    </p>
+  </body>
+</html>

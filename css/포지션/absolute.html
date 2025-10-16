@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>absolute</title>
+    <style>
+      body {
+        height: 2000vh;
+      }
+      /* 
+        position: 위치
+          기본값: static;
+          relative
+            - static과 같지만 left,top,right,bottom을 사용
+            - left,top,right,bottom의 기준은? 자기 자신
+               -> left, top, right, bottom을 지정하지 않았을 때의 위치
+                  즉 원래 위치
+          absolute
+          - left,top,right,bottom의 기준은?
+             -> position이 static이 아닌 조상(부모)
+          fixed
+            - left,top,right,bottom의 기준은? 뷰포트
+          sticky
+        
+        left
+        right
+        top
+        bottom
+       */
+      .parent {
+        position: relative;
+        right: 100px;
+        bottom: 100px;
+        width: 400px;
+        height: 300px;
+        border: solid;
+      }
+      .children {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        /* left: 30px; */
+        /* top: 30px; */
+        right: 30px;
+        bottom: 30px;
+        border: 3px solid #73ad21;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="children"></div>
+    </div>
+  </body>
+</html>

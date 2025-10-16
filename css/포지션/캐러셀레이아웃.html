@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>캐러셀</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      .container {
+        position: relative;
+        height: 100vh;
+        background-color: #ff636b;
+      }
+      .nextprev {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 30px;
+        /* width: 100%; */
+        top: 50%;
+        transform: translateY(-50%);
+        /* background-color: lightcoral; */
+      }
+      .nextprev img {
+        cursor: pointer;
+      }
+
+      /* pagination 또는 indicator */
+      .pagination {
+        position: absolute;
+        left: 50%;
+        /* margin-left: -24.501px; */
+        /* left: calc(50% - 24.501px); */
+        transform: translateX(-50%);
+        bottom: 40px;
+      }
+      .pagination span {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        margin: 10px;
+        border-radius: 50%;
+        background-color: #fff;
+        text-indent: -9999px;
+        vertical-align: middle;
+        cursor: pointer;
+      }
+      .pagination .active {
+        width: 20px;
+        height: 20px;
+        /* transform: scale(2.5); */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="nextprev">
+        <div class="prev-btn">
+          <img src="/assets/인쓰리/main-visual-prev.png" alt="이전 버튼" />
+        </div>
+        <div class="next-btn">
+          <img src="/assets/인쓰리/main-visual-next.png" alt="다음 버튼" />
+        </div>
+      </div>
+      <div class="pagination">
+        <span class="active">1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+      </div>
+    </div>
+  </body>
+</html>
