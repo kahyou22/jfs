@@ -74,6 +74,11 @@ body {
   font-size: 22px;
   color: #333;
   line-height: 27px;
+  margin-bottom: 16px;
+}
+
+.card-details {
+  margin-bottom: 16px;
 }
 
 .phone-number {
