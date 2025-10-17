@@ -71,6 +71,13 @@
   justify-content: center;
   align-items: center;
   /* gap: 20px; */
+  /* background-image: url(./assets/honorsville/bg_section02.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; */
+  background: url(./assets/honorsville/bg_percel.jpg) no-repeat center/1180px
+      351px,
+    url(./assets/honorsville/bg_section02.jpg) no-repeat center/cover;
 }
 
 #sec2 .bg {
@@ -96,7 +103,7 @@
 
 #sec2 .tearplan {
   position: absolute;
-  top: 40px;
+  top: 80px;
   right: 0;
   font-size: 18px;
   font-weight: 600;
@@ -111,6 +118,13 @@
 #sec2 .bg-percel {
   position: absolute;
   top: 40%;
+  width: 1180px;
+  height: 351px;
+  /* background-image: url(./assets/honorsville/bg_percel.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center; */
+  /* background: url(./assets/honorsville/bg_percel.jpg) no-repeat center/contain; */
 }
 
 /* card-container */
@@ -186,6 +200,38 @@
 /* 카드 UI 정보 */
 .card-body {
   margin: 0 45px 120px; /* m0-45-120 */
+}
+
+/* section3 area */
+#sec3 {
+  /* 배경 이미지 + Parallax Scrolling */
+  /* background-attachment: fixed; */
+  background: url(./assets/2025_autumn_pick_bg_250916.jpg) no-repeat
+    center/cover fixed;
+}
+
+#sec3 .intro {
+  position: absolute;
+  left: 400px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 355px;
+  height: 470px;
+  background: rgb(183, 235, 11);
+}
+#sec3 .intro h2 {
+  text-transform: uppercase;
+}
+#sec3 .intro span {
+  display: block;
+}
+#sec3 .product {
+  position: absolute;
+  left: 890px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 880px;
+  height: 550px;
 }
 
 /* footer */

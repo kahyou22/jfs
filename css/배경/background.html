@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 배경</title>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      .section {
+        position: relative;
+        /* width: 100%; */
+        background-image: url(/assets/ht/main_visual.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-size: cover;
+        background-position: center;
+        /* background: 색|이미지 [반복] [위치][/크기] [고정]; */
+        /* 기본값: background: transparent|none repeat 0 0/100% scroll; */
+        /* background: url(/assets/ht/main_visual.png) no-repeat center/cover; */
+        height: 100vh;
+      }
+
+      .balloon {
+        position: absolute;
+        top: 8vh;
+        left: 65vw;
+        width: 326px;
+        height: 371px;
+        background-image: url(/assets/ht/main_visual_ballon2.png);
+        /* repeat: 반복(기본값) */
+        /* no-repeat: 반복 없음 */
+        /* repeat-x: x축 반복 */
+        /* repeat-y: y축 반복 */
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        animation: b 10s ease-in-out infinite;
+      }
+
+      .balloon img {
+        height: 100%;
+      }
+
+      @keyframes b {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-8%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="section">
+      <div class="balloon">
+        <!-- <img src="/assets/ht/main_visual_ballon2.png" alt="맛동산풍선캐릭터" /> -->
+      </div>
+    </div>
+  </body>
+</html>
