@@ -18,6 +18,12 @@ footer .inquiry {
   height: 306px;
   background: #fff url(/assets/farmhannong/footer_img.png) no-repeat 0 100%;
 }
+footer .inquiry .inner {
+  display: flex;
+}
+footer .inquiry .con-area {
+  display: flex;
+}
 footer .inquiry h2 {
   color: #333;
 }
