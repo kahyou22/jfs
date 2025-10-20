@@ -1,9 +1,9 @@
 @charset "utf-8";
 
 footer {
-  background-color: #222;
-  padding: 50px 0;
-  color: var(--white-color);
+  padding-bottom: 50px;
+  color: #555;
+  background: #222 url(./assets/farmhannong/logo.png) no-repeat 80px 380px;
 }
 
 footer a {
@@ -14,11 +14,28 @@ footer img {
   width: auto;
 }
 
+footer .inquiry {
+  height: 306px;
+  background: #fff url(/assets/farmhannong/footer_img.png) no-repeat 0 100%;
+}
+footer .inquiry h2 {
+  color: #333;
+}
+footer .inquiry .tel-area a {
+  color: #333;
+}
+footer .inquiry .faq-btn {
+  background: #54a922;
+}
+footer .inquiry .consult-btn {
+  background: #7b7b7b;
+}
 footer .info {
   display: flex;
   justify-content: space-between;
   max-width: 1500px;
   margin-left: 250px;
+  padding-top: 50px;
 }
 
 footer .left-info .util-box {
@@ -29,9 +46,19 @@ footer .left-info ul {
   display: flex;
 }
 
-footer .left-info {
-  display: flex;
-  flex-direction: column;
+footer .sns li:nth-of-type(1) img,
+footer .sns li:nth-of-type(2) img {
+  width: 29px;
+  height: 20px;
+}
+
+footer .sns li:nth-of-type(3) img {
+  width: 23px;
+  height: 24px;
+}
+footer .sns li:nth-of-type(4) img {
+  width: 28px;
+  height: 25px;
 }
 
 /* footer::before {
