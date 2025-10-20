@@ -35,6 +35,8 @@
   --main-color: #9a8b86;
   --sub-color: #3e3a38;
   --white-color: #fff;
+  --gray5: #555;
+  --gray3: #333;
   --fwm: 500;
 }
 
@@ -124,4 +126,29 @@ body {
 }
 #sec3 .intro p:last-of-type {
   line-height: 1.45;
+}
+
+footer {
+  color: var(--gray5);
+}
+
+footer a {
+  color: var(--white-color);
+}
+
+footer .inquiry h2 {
+  color: var(--gray3);
+  font-size: 50px;
+}
+footer .inquiry .tel-area a {
+  color: var(--gray3);
+  font-size: 50px;
+}
+footer .inquiry .tel-area p {
+  font-size: 26px;
+  font-weight: 100;
+}
+footer .inquiry .con-btn a {
+  font-size: 20px;
+  font-weight: 700;
 }
