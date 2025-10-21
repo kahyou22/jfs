@@ -3,7 +3,7 @@
 footer .inquiry {
   height: 426px;
   padding-top: 120px;
-  background: #fff url(/assets/farmhannong/footer_img.png) no-repeat 0 100%;
+  background: #fff url(./../assets/img/footer_img.png) no-repeat 0 100%;
 }
 footer .inquiry .inner {
   display: flex;
@@ -32,7 +32,7 @@ footer .inquiry .faq-btn {
   margin-right: 12px;
 }
 footer .inquiry .faq-btn span {
-  background: url(./assets/farmhannong/icon_main_inquiry_01.png) no-repeat 0 /
+  background: url(./../assets/img/icon_main_inquiry_01.png) no-repeat 0 /
     contain;
   padding-left: 67px;
 }
@@ -45,12 +45,12 @@ footer .inquiry .consult-btn {
   width: 274px;
 }
 footer .inquiry .consult-btn span {
-  background: url(./assets/farmhannong/icon_main_inquiry_02.png) no-repeat 0 /
+  background: url(./../assets/img/icon_main_inquiry_02.png) no-repeat 0 /
     contain;
   padding-left: 57px;
 }
 footer .info {
-  background: #222 url(./assets/farmhannong/logo.png) no-repeat 80px 70px;
+  background: #222 url(./../assets/img/logo.png) no-repeat 80px 70px;
   padding: 50px 250px;
 }
 footer .info .inner {

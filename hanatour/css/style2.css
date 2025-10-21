@@ -76,9 +76,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; */
-  background: url(./assets/honorsville/bg_percel.jpg) no-repeat center/1180px
-      351px,
-    url(./assets/honorsville/bg_section02.jpg) no-repeat center/cover;
+  background: url(./../assets/img/bg_percel.jpg) no-repeat center/1180px 351px,
+    url(./../assets/img/bg_section02.jpg) no-repeat center/cover;
 }
 
 #sec2 .bg {
@@ -207,7 +206,7 @@
 #sec3 {
   /* 배경 이미지 + Parallax Scrolling */
   /* background-attachment: fixed; */
-  background: url(./assets/2025_autumn_pick_bg_250916.jpg) no-repeat
+  background: url(./../assets/img/2025_autumn_pick_bg_250916.jpg) no-repeat
     center/cover fixed;
 }
 
