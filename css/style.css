@@ -17,6 +17,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  scroll-behavior: smooth;
+}
+
 body,
 h1,
 h2,
@@ -29,6 +33,11 @@ ul {
 ul {
   padding: 0;
   list-style: none;
+}
+
+a {
+  color: #555;
+  text-decoration: none;
 }
 
 :root {
@@ -50,6 +59,23 @@ h2 {
 footer a,
 footer p {
   color: #fff;
+}
+
+footer .top-btn a {
+  color: #333;
+}
+
+footer .top-btn:hover a {
+  color: #ddd;
+}
+
+footer .sns {
+  margin: 24px;
+}
+
+footer .sns i {
+  font-size: 2.4rem;
+  margin: 0 -3px;
 }
 
 h2 {
@@ -80,18 +106,13 @@ footer:hover {
 footer .top-btn {
   display: inline-block;
   padding: 8px 16px;
-  background-color: #f1f1f1;
+  background-color: #ddd;
 }
 
 footer .top-btn:hover {
-  background-color: #ccc;
+  background-color: #aaa;
 }
 
-footer .top-btn a {
-  color: #555;
-  text-decoration: none;
-}
-
-footer .top-btn:hover a {
-  color: #f1f1f1;
+footer .top-btn i {
+  margin-right: 8px;
 }
