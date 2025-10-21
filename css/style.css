@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css);
+
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
 @font-face {
@@ -29,16 +31,25 @@ ul {
   list-style: none;
 }
 
+:root {
+  font-size: 10px;
+}
+
 body {
-  font-family: "Lato-Regular", sans-serif;
+  font: 1.5rem/1.6 "Lato-Regular", sans-serif;
 }
 
 h2 {
   font-weight: 400;
-  font-size: 24px;
+  font-size: 2.4rem;
   color: #fff;
-  letter-spacing: 10px;
+  letter-spacing: 1rem;
   text-transform: uppercase;
+}
+
+footer a,
+footer p {
+  color: #fff;
 }
 
 h2 {
@@ -54,4 +65,14 @@ h2 {
   height: 100vh;
   background: url(./../assets/img/marita-kavelashvili-ugnrXk1129g-unsplash.jpg)
     no-repeat 50% 50% / cover;
+}
+
+footer {
+  padding: 100px 0;
+  text-align: center;
+  background-color: #555;
+}
+
+footer:hover {
+  background-color: #111;
 }
