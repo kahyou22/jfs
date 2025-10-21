@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+@font-face {
+  font-family: "Lato-Regular";
+  src: url(./../assets/font/Lato-Regular.ttf);
+}
+@font-face {
+  font-family: "Lato-Thin";
+  src: url(./../assets/font/Lato-Thin.ttf);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  font-family: "Lato-Regular", sans-serif;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 24px;
+  color: #fff;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+}
+
+h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 12px 24px;
+  background: #404040;
+}
+
+#home {
+  height: 100vh;
+  background: url(./../assets/img/marita-kavelashvili-ugnrXk1129g-unsplash.jpg)
+    no-repeat 50% 50% / cover;
+}
