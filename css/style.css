@@ -138,3 +138,103 @@ footer .top-btn i {
   background: url(./../assets/img/marita-kavelashvili-ugnrXk1129g-unsplash.jpg)
     no-repeat 50% 50% / cover;
 }
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #777;
+  margin-bottom: 160px;
+}
+
+#contact a {
+  color: #777;
+}
+
+#contact .parallax-bg {
+  width: 100%;
+  height: 100vh;
+  background: url(./../assets/img/parallax3.jpg) no-repeat 50% 50% / cover fixed;
+}
+
+#contact .parallax-bg h2 {
+  background: transparent;
+}
+
+#contact h3 {
+  font-size: 2.4rem;
+  margin-top: 60px;
+}
+
+#contact h3 + p {
+  margin-bottom: 60px;
+}
+
+#contact .container {
+  display: flex;
+  gap: 32px;
+}
+
+#contact .map iframe {
+  width: 280px;
+  height: 160px;
+  border-radius: 8px;
+}
+
+#contact .contact {
+  width: 600px;
+}
+
+#contact .addr {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* gap: 12px; */
+  margin: 16px 0;
+  font-size: 1.8rem;
+}
+#contact .addr i {
+  margin-right: 16px;
+}
+
+#contact p {
+  margin: 16px 0;
+  font-size: 1.5rem;
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#contact form .field-group {
+  display: flex;
+  gap: 12px;
+}
+
+#contact form .field-group:last-of-type {
+  justify-content: flex-end;
+}
+
+#contact form input,
+#contact form textarea {
+  width: 100%;
+  height: 46px;
+  border: 1px solid #ccc;
+}
+#contact form textarea {
+  height: 150px;
+  resize: none;
+}
+
+#contact form button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  height: 44px;
+  padding: 8px 16px;
+  background: #111;
+  color: #f3f3f3;
+}
