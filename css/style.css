@@ -56,6 +56,10 @@ h2 {
   text-transform: uppercase;
 }
 
+header a {
+  color: #f3f3f3;
+}
+
 footer a,
 footer p {
   color: #fff;
@@ -87,10 +91,22 @@ h2 {
   background: #404040;
 }
 
-#home {
-  height: 100vh;
-  background: url(./../assets/img/marita-kavelashvili-ugnrXk1129g-unsplash.jpg)
-    no-repeat 50% 50% / cover;
+header .gnb ul {
+  position: fixed;
+  display: flex;
+}
+
+header .gnb li a {
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+header .gnb li a:hover {
+  background-color: #333;
+}
+
+header .gnb li i {
+  margin-right: 8px;
 }
 
 footer {
@@ -115,4 +131,10 @@ footer .top-btn:hover {
 
 footer .top-btn i {
   margin-right: 8px;
+}
+
+#home {
+  height: 100vh;
+  background: url(./../assets/img/marita-kavelashvili-ugnrXk1129g-unsplash.jpg)
+    no-repeat 50% 50% / cover;
 }
