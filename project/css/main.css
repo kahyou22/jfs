@@ -3,6 +3,89 @@
 @import url(typo.css);
 @import url(footer.css);
 
+/* section1 area */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+
+#sec1 {
+  color: var(--white-color);
+}
+
+#sec1 h2 {
+  font-size: 60px;
+}
+
+#sec1 p {
+  font-size: 24px;
+}
+
+#sec1 span:first-of-type {
+  font-size: 40px;
+}
+#sec1 span:last-of-type {
+  font-size: 17px;
+}
+
+#sec1 .counter div {
+  color: var(--sub-color);
+}
+
+/* section2 area */
+
+.card-title {
+  font-size: 22px;
+  color: #333;
+  line-height: 27px;
+  margin-bottom: 16px;
+}
+
+.card-details {
+  margin-bottom: 16px;
+}
+
+.phone-number {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 24px; /* fz24 */
+  color: #0f2244;
+  font-weight: bold; /* fwb */
+}
+
+/* section3 area */
+#sec3 .intro {
+  color: var(--white-color);
+}
+#sec3 .intro a {
+  color: var(--white-color);
+}
+#sec3 .intro h2 {
+  line-height: 1;
+  font-weight: var(--fwm);
+}
+#sec3 .intro span:nth-of-type(1) {
+  font-size: 100px;
+  letter-spacing: 7px;
+}
+#sec3 .intro span:nth-of-type(2) {
+  font-size: 80px;
+  letter-spacing: 8px;
+}
+#sec3 .intro span:nth-of-type(3) {
+  font-size: 45px;
+  letter-spacing: 5px;
+}
+#sec3 .intro p:first-of-type {
+  font-size: 28px;
+  line-height: 1;
+}
+#sec3 .intro p:first-of-type b {
+  font-weight: var(--fwm);
+}
+#sec3 .intro p:first-of-type strong {
+  font-weight: var(--fwm);
+}
+#sec3 .intro p:last-of-type {
+  line-height: 1.45;
+}
+
 .card-details p {
   /* p는 위아래 기본 마진이 있다. 폰트 크기의 1em */
   margin: 0;

@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+@import url(common.css);
+
+body,
+::placeholder,
+a,
+button {
+  color: #ccc;
+}
+i,
+h1 {
+  color: var(--white-color);
+}
+::placeholder {
+  font-size: 1.6rem;
+}
+
+.login_container {
+  position: relative;
+  height: 100vh;
+  background: url(./../assets/img/loginBg.jpg) no-repeat center center;
+}
+
+.login_inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 420px;
+  height: 330px;
+  transform: translate(-50%, -50%);
+}
+
+.login_inner h1 {
+  text-align: center;
+  letter-spacing: 8px;
+  margin-bottom: 20px;
+}
+
+.login_group {
+  display: flex;
+  margin-bottom: 8px;
+  gap: 2px;
+}
+
+.login_group input {
+  /* width: calc(100% - 50px); */
+  width: 100%;
+  height: 50px;
+  /* vertical-align: middle; */
+  background: rgba(255, 255, 255, 0.2);
+  font-size: 1.6rem;
+  padding-left: 16px;
+  color: var(--white-color);
+}
+
+.login_group label {
+  /* display: inline-block; */
+  /* vertical-align: middle; */
+  width: 45px;
+  height: 50px;
+  line-height: 50px;
+  background: rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+
+.login_btn button {
+  width: 100%;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  font-size: 1.6rem;
+  margin: 20px 0 30px;
+  cursor: pointer;
+}
+
+.login_btn button:hover {
+  border: 1px solid var(--white-color);
+  color: var(--white-color);
+}
+
+.links {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 40px;
+}
+
+.login_container .closed_btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+}
