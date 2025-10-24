@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>표: border-collapse</title>
+    <style>
+      table {
+        border: 1px solid;
+        margin: 50px;
+      }
+
+      td,
+      th {
+        border: 1px solid;
+      }
+
+      #table1 {
+        border-collapse: separate;
+      }
+
+      #table2 {
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="table1">
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+      </tr>
+      <tr>
+        <td>Peter</td>
+        <td>Griffin</td>
+      </tr>
+      <tr>
+        <td>Lois</td>
+        <td>Griffin</td>
+      </tr>
+    </table>
+
+    <table id="table2">
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+      </tr>
+      <tr>
+        <td>Peter</td>
+        <td>Griffin</td>
+      </tr>
+      <tr>
+        <td>Lois</td>
+        <td>Griffin</td>
+      </tr>
+    </table>
+  </body>
+</html>
