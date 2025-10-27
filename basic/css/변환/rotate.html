@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2D 변환</title>
+    <style>
+      /* 
+        translate()
+        rotate()
+        scaleX()
+        scaleY()
+        scale()
+        skewX()
+        skewY()
+        skew()
+        matrix()
+       */
+
+      .close {
+        /* background-color: blue; */
+        line-height: 1;
+        display: inline-block;
+        transform: rotate(0deg);
+        transition: 0.5s;
+        transform-origin: 50% 58%;
+      }
+
+      .close:hover {
+        transform: rotate(360deg);
+      }
+    </style>
+  </head>
+  <body>
+    <span class="close">❌</span>
+  </body>
+</html>
