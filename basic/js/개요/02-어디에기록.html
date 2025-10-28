@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS: 어디에?</title>
+    <script src="./script2.js"></script>
+    <script>
+      function fn3() {
+        alert("안녕!");
+      }
+      window.addEventListener("DOMContentLoaded", function () {
+        var btn3 = document.getElementById("btn3");
+        btn3.onclick = fn3;
+      });
+    </script>
+  </head>
+  <body>
+    <button type="button" id="btn">내부 스크립트 버튼</button>
+    <button type="button" id="btn2">외부 스크립트 버튼</button>
+    <button type="button" id="btn3">Head의 내부 스크립트 버튼</button>
+    <button type="button" id="btn4">Head의 외부 스크립트 버튼</button>
+    <button type="button" onclick="alert('Hello');">버튼 클릭</button>
+    <script src="./script.js"></script>
+    <script>
+      function fn() {
+        alert("World~");
+      }
+      var btn = document.getElementById("btn");
+      btn.onclick = fn;
+    </script>
+  </body>
+</html>
