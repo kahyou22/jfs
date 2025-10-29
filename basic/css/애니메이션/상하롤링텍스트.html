@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>상하슬라이드</title>
+    <title>상하롤링텍스트</title>
     <style>
       body,
       ul {
@@ -22,11 +22,11 @@
       }
 
       .slider {
-        width: 600px;
-        height: 300px;
+        width: 400px;
+        height: 45px;
         overflow: hidden;
         margin: 50px auto;
-        border: 20px solid #333;
+        border: 1px solid #333;
       }
 
       .slides {
@@ -35,7 +35,16 @@
       }
 
       .slider li {
+        display: flex;
+        align-items: center;
         height: 25%;
+        padding: 0px 8px;
+      }
+
+      .slider span {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
       }
 
       @keyframes slideRoll {
@@ -67,29 +76,20 @@
     <div class="slider">
       <ul class="slides">
         <li>
-          <img
-            src="../../assets/images/20250901085539504042.png"
-            alt="이미지1"
-          />
+          <span> [속보] 李대통령 "김정은, 트럼프 뜻 수용 못했지만…평화의 </span>
         </li>
         <li>
-          <img
-            src="../../assets/images/20250314110653975050.png"
-            alt="이미지2"
-          />
+          <span> 이창용 한은총재 "올해 성장률 1%이상 가능성 커졌다" </span>
         </li>
         <li>
-          <img
-            src="../../assets/images/20250901085834618047.png"
-            alt="이미지3"
-          />
+          <span>
+            '反트럼프 시위대' 경찰 저지 뚫고 한미 정상회담장 진입 시도 李대통령
+            "케데헌 혼문처럼 연대…내란몰아낸 K민주주의가 증명"
+          </span>
         </li>
-        <!-- 롤링 이미지 -->
+        <!-- 롤링 텍스트 -->
         <li>
-          <img
-            src="../../assets/images/20250901085539504042.png"
-            alt="이미지1"
-          />
+          <span> [속보] 李대통령 "김정은, 트럼프 뜻 수용 못했지만…평화의 </span>
         </li>
       </ul>
     </div>

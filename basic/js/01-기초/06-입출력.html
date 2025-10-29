@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS: 입출력</title>
+  </head>
+  <body>
+    <h1>JS: 입출력</h1>
+    <p id="result">여기에 출력됩니다.</p>
+    <script>
+      // window.alert("문자열");
+      // window.alert(100 + 10);
+      // alert(100 + 10);
+      // alert((100 + 10) + "\n" + "문자열");
+      console.log("문자열");
+      console.log("\n");
+      console.log("\n");
+      console.log("\n");
+      console.log("\n");
+      console.log(100 + 10);
+      document.write("문자열" + "<br>");
+      document.write("<br>");
+      document.write("<br>");
+      document.write("<br>");
+      document.write("<br>");
+      document.write("<br>");
+      document.write("<br>");
+      document.write(100 + 10);
+
+      const p = document.getElementById("result");
+      p.innerHTML = "Hello";
+
+      var city = prompt("지역을 입력하세요.", "서울");
+      alert("당신이 사는 곳은 " + city + "입니다.");
+    </script>
+  </body>
+</html>

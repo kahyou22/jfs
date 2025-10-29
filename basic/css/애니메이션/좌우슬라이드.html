@@ -5,8 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>좌우슬라이드</title>
     <style>
-      body {
+      body,
+      ul {
         margin: 0;
+      }
+      ul,
+      li {
+        padding: 0;
+        list-style: none;
       }
       img {
         vertical-align: top;
@@ -25,9 +31,14 @@
 
       .slides {
         display: flex;
-        width: 100%;
+        width: calc(100% * 4);
+        /* width: 100%; */
         height: 100%;
         animation: slideRoll 9s infinite;
+      }
+
+      .slider li {
+        height: 100%;
       }
 
       @keyframes slideRoll {
@@ -35,35 +46,55 @@
           transform: translateX(0);
         }
         11.11% {
-          transform: translateX(calc(-100% * 1));
+          transform: translateX(calc(-25% * 1));
         }
         33.33% {
-          transform: translateX(calc(-100% * 1));
+          transform: translateX(calc(-25% * 1));
         }
         44.44% {
-          transform: translateX(calc(-100% * 2));
+          transform: translateX(calc(-25% * 2));
         }
         66.66% {
-          transform: translateX(calc(-100% * 2));
+          transform: translateX(calc(-25% * 2));
         }
         77.77% {
-          transform: translateX(calc(-100% * 3));
+          transform: translateX(calc(-25% * 3));
         }
         100% {
-          transform: translateX(calc(-100% * 3));
+          transform: translateX(calc(-25% * 3));
         }
       }
     </style>
   </head>
   <body>
     <div class="slider">
-      <div class="slides">
-        <img src="../../assets/images/20250901085539504042.png" alt="이미지1" />
-        <img src="../../assets/images/20250314110653975050.png" alt="이미지2" />
-        <img src="../../assets/images/20250901085834618047.png" alt="이미지3" />
+      <ul class="slides">
+        <li>
+          <img
+            src="../../assets/images/20250901085539504042.png"
+            alt="이미지1"
+          />
+        </li>
+        <li>
+          <img
+            src="../../assets/images/20250314110653975050.png"
+            alt="이미지2"
+          />
+        </li>
+        <li>
+          <img
+            src="../../assets/images/20250901085834618047.png"
+            alt="이미지3"
+          />
+        </li>
         <!-- 롤링 이미지 -->
-        <img src="../../assets/images/20250901085539504042.png" alt="이미지1" />
-      </div>
+        <li>
+          <img
+            src="../../assets/images/20250901085539504042.png"
+            alt="이미지1"
+          />
+        </li>
+      </ul>
     </div>
   </body>
 </html>
