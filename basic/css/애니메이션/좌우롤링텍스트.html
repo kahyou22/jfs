@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        font-weight: 500;
+      }
+
+      .marquee .inner {
+        display: flex;
+        gap: 100px;
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 90px;
+        color: #cfc0bb;
+        letter-spacing: 12px;
+      }
+
+      .marquee span {
+        animation: rolltxt 9s linear infinite;
+      }
+
+      .marquee.right span {
+        animation-direction: reverse;
+      }
+
+      @keyframes rolltxt {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(calc(-100% - 100px));
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="marquee right">
+      <div class="inner">
+        <span>PRESTIGEㆍCONSIDERATIONㆍAFFINITY</span>
+        <span>PRESTIGEㆍCONSIDERATIONㆍAFFINITY</span>
+        <span>PRESTIGEㆍCONSIDERATIONㆍAFFINITY</span>
+      </div>
+    </div>
+    <div class="marquee">
+      <div class="inner">
+        <span>PRESTIGEㆍCONSIDERATIONㆍAFFINITY</span>
+        <span>PRESTIGEㆍCONSIDERATIONㆍAFFINITY</span>
+        <span>PRESTIGEㆍCONSIDERATIONㆍAFFINITY</span>
+      </div>
+    </div>
+  </body>
+</html>
