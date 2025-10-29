@@ -10,8 +10,8 @@
       }
       img {
         vertical-align: top;
-        width: 600px;
-        height: 300px;
+        width: 100%;
+        height: 100%;
         object-fit: cover;
       }
 
@@ -25,10 +25,8 @@
 
       .slides {
         display: flex;
-        width: calc(600px * 4);
-        /* animation-name: slideRoll;
-        animation-duration: 9s;
-        animation-iteration-count: infinite; */
+        width: 100%;
+        height: 100%;
         animation: slideRoll 9s infinite;
       }
 
@@ -37,22 +35,22 @@
           transform: translateX(0);
         }
         11.11% {
-          transform: translateX(calc(-25% * 1));
+          transform: translateX(calc(-100% * 1));
         }
         33.33% {
-          transform: translateX(calc(-25% * 1));
+          transform: translateX(calc(-100% * 1));
         }
         44.44% {
-          transform: translateX(calc(-25% * 2));
+          transform: translateX(calc(-100% * 2));
         }
         66.66% {
-          transform: translateX(calc(-25% * 2));
+          transform: translateX(calc(-100% * 2));
         }
         77.77% {
-          transform: translateX(calc(-25% * 3));
+          transform: translateX(calc(-100% * 3));
         }
         100% {
-          transform: translateX(calc(-25% * 3));
+          transform: translateX(calc(-100% * 3));
         }
       }
     </style>
