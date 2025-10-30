@@ -50,6 +50,11 @@
 }
 
 /* section3 area */
+#sec3 {
+  width: 100vw;
+  overflow: hidden;
+}
+
 #sec3 .intro {
   color: var(--white-color);
 }

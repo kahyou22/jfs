@@ -35,6 +35,7 @@ body {
   font: 15px/1.6 "Noto Sans KR", sans-serif;
   /* color: var(--main-color); */
   color: var(--gray5);
+  overflow-x: hidden;
 }
 
 img {
