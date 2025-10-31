@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS: switch</title>
+  </head>
+  <body>
+    <script>
+      document.write(new Date());
+
+      function format02d(n) {
+        return n < 10 ? "0" + n : n;
+      }
+
+      function digitalClock() {
+        document.body.innerHTML = "";
+
+        const date = new Date();
+        let day;
+
+        // switch (date.getDay()) {
+        //   case 0:
+        //     day = "일";
+        //     break;
+        //   case 1:
+        //     day = "월";
+        //     break;
+        //   case 2:
+        //     day = "화";
+        //     break;
+        //   case 3:
+        //     day = "수";
+        //     break;
+        //   case 4:
+        //     day = "목";
+        //     break;
+        //   case 5:
+        //     day = "금";
+        //     break;
+        //   case 6:
+        //     day = "토";
+        //     break;
+        // }
+
+        if (date.getDay() == 0) {
+          day = "일";
+        } else if (date.getDay() == 1) {
+          day = "월";
+        } else if (date.getDay() == 2) {
+          day = "화";
+        } else if (date.getDay() == 3) {
+          day = "수";
+        } else if (date.getDay() == 4) {
+          day = "목";
+        } else if (date.getDay() == 5) {
+          day = "금";
+        } else if (date.getDay() == 6) {
+          day = "토";
+        }
+
+        document.write(date.getFullYear() + "년<br>");
+        document.write(date.getMonth() + 1 + "월<br>");
+        document.write(date.getDate() + "일<br>");
+        document.write(day + "요일<br>");
+        document.write(format02d(date.getHours()) + ":");
+        document.write(format02d(date.getMinutes()) + ":");
+        document.write(format02d(date.getSeconds()) + "<br>");
+      }
+
+      digitalClock();
+      setInterval(digitalClock, 1000);
+    </script>
+  </body>
+</html>

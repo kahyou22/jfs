@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인 페이지</title>
+  </head>
+  <body>
+    <p>아이디, 비밀번호 입력</p>
+    <script>
+      let uid = prompt("아이디를 입력하세요.");
+      let upw = prompt("비밀번호를 입력하세요.");
+
+      if (uid === "admin") {
+        if (upw === "1234") {
+          location.href = "https://kahyou22.github.io/jfs";
+        } else {
+          // location.href = "./error.html";
+          alert("비밀번호를 다시 입력해 주세요.");
+          upw = prompt("비밀번호를 입력하세요.");
+        }
+      } else {
+        // location.href = "./error.html";
+        alert("아이디를 다시 입력해 주세요.");
+        uid = prompt("아이디를 입력하세요.");
+      }
+    </script>
+  </body>
+</html>

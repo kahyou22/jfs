@@ -8,6 +8,7 @@
   <body>
     <script>
       let age = prompt("나이를 입력하세요.");
+      let result;
 
       if (age >= 19) {
         document.write("성인입니다.");
@@ -29,10 +30,62 @@
       }
 
       if (age >= 19) {
-        document.write("성인입니다.");
+        result = "성인입니다.";
       } else {
-        document.write("미성년자입니다.");
+        result = "미성년자1입니다.";
       }
+      document.write(result);
+
+      age >= 19 ? "성인입니다." : "미성년자2입니다.";
+      document.write(result);
+
+      const gender = "M";
+      age = 21;
+
+      if (gender === "F") {
+        if (age >= 19) {
+          result = "여자 성인입니다.";
+        } else {
+          result = "여자 미성년자입니다.";
+        }
+      } else {
+        if (age >= 19) {
+          result = "남자 성인입니다.";
+        } else {
+          result = "남자 미성년자입니다.";
+        }
+      }
+      document.write("당신은 " + result + "</p>");
+
+      const point = prompt("점수를 입력하세요.");
+      let grade;
+
+      if (point > 100) {
+        result = "잘못 입력하셨습니다. 다시 입력해 주세요.";
+      } else if (point > 90) {
+        grade = "A";
+        result = "아주 잘했어요.";
+      } else if (point >= 80) {
+        grade = "B";
+        result = "잘했어요.";
+      } else if (point >= 70) {
+        grade = "C";
+        result = "조금만 노력하면 잘할 수 있어요.";
+      } else if (point >= 60) {
+        grade = "D";
+        result = "좀 더 노력하세요.";
+      } else {
+        grade = "F";
+        result = "많이 노력하시기 바랍니다.";
+      }
+
+      document.write(
+        result +
+          "<br>" +
+          "학생의 학점은 <b style='color: red;'>" +
+          grade +
+          "</b>입니다.<br><br>"
+      );
     </script>
   </body>
 </html>
