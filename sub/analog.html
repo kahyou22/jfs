@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>아날로그 시계</title>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      .clock {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+      }
+
+      .clock .hours {
+        --start-angle: -90deg;
+        --angle1: calc(var(--start-angle) + 30deg * 1);
+        --angle2: calc(var(--start-angle) + 30deg * 2);
+        --angle3: calc(var(--start-angle) + 30deg * 3);
+        --angle4: calc(var(--start-angle) + 30deg * 4);
+        --angle5: calc(var(--start-angle) + 30deg * 5);
+        --angle6: calc(var(--start-angle) + 30deg * 6);
+        --angle7: calc(var(--start-angle) + 30deg * 7);
+        --angle8: calc(var(--start-angle) + 30deg * 8);
+        --angle9: calc(var(--start-angle) + 30deg * 9);
+        --angle10: calc(var(--start-angle) + 30deg * 10);
+        --angle11: calc(var(--start-angle) + 30deg * 11);
+        --angle12: calc(var(--start-angle) + 30deg * 12);
+
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+
+      .clock .hour {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        text-align: right;
+
+        /* 숫자 위치 조절용 회전 */
+        transform: translate(-50%, -50%) rotate(var(--angle));
+      }
+
+      .clock .hour .h {
+        display: inline-block;
+
+        /* 회전된 숫자 정상화 */
+        transform: rotate(calc(0deg - var(--angle)));
+      }
+
+      .clock .hour:nth-child(1) {
+        --angle: var(--angle1);
+      }
+
+      .clock .hour:nth-child(2) {
+        --angle: var(--angle2);
+      }
+
+      .clock .hour:nth-child(3) {
+        --angle: var(--angle3);
+      }
+
+      .clock .hour:nth-child(4) {
+        --angle: var(--angle4);
+      }
+
+      .clock .hour:nth-child(5) {
+        --angle: var(--angle5);
+      }
+
+      .clock .hour:nth-child(6) {
+        --angle: var(--angle6);
+      }
+
+      .clock .hour:nth-child(7) {
+        --angle: var(--angle7);
+      }
+
+      .clock .hour:nth-child(8) {
+        --angle: var(--angle8);
+      }
+
+      .clock .hour:nth-child(9) {
+        --angle: var(--angle9);
+      }
+
+      .clock .hour:nth-child(10) {
+        --angle: var(--angle10);
+      }
+
+      .clock .hour:nth-child(11) {
+        --angle: var(--angle11);
+      }
+
+      .clock .hour:nth-child(12) {
+        --angle: var(--angle12);
+      }
+
+      .lines {
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(100%);
+        width: 50%;
+      }
+
+      .lines .line {
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        transform-origin: left;
+      }
+
+      .lines .line.h {
+        background-color: red;
+      }
+
+      .lines .line.m {
+        background-color: blue;
+      }
+
+      .lines .line.s {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="clock">
+      <div class="hours">
+        <div class="hour"><div class="h">1</div></div>
+        <div class="hour"><div class="h">2</div></div>
+        <div class="hour"><div class="h">3</div></div>
+        <div class="hour"><div class="h">4</div></div>
+        <div class="hour"><div class="h">5</div></div>
+        <div class="hour"><div class="h">6</div></div>
+        <div class="hour"><div class="h">7</div></div>
+        <div class="hour"><div class="h">8</div></div>
+        <div class="hour"><div class="h">9</div></div>
+        <div class="hour"><div class="h">10</div></div>
+        <div class="hour"><div class="h">11</div></div>
+        <div class="hour"><div class="h">12</div></div>
+      </div>
+      <div class="lines" id="lines">
+        <div class="line h"></div>
+        <div class="line m"></div>
+        <div class="line s"></div>
+      </div>
+    </div>
+    <script>
+      const linesEl = document.getElementById("lines");
+
+      setInterval(function () {
+        const now = new Date();
+        const s = (now.getSeconds() / 60) * 360;
+
+        let html = "";
+        html +=
+          '<div class="line s" style="transform: rotate(calc(' +
+          s +
+          'deg - 90deg))"></div>';
+
+        linesEl.innerHTML = html;
+      });
+    </script>
+  </body>
+</html>
