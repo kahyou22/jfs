@@ -157,8 +157,8 @@ footer .top-btn i {
 
 #home .circle-ani {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -32px;
+  right: -32px;
   width: 141px;
   height: 140px;
   /* transition: 5s linear; */
