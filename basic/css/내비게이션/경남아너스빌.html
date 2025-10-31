@@ -90,15 +90,18 @@
       #header .main > li > a::after {
         content: "";
         display: block;
-        width: 0;
+        width: 100%;
         /* margin: auto; */
         height: 2px;
         background: #bbb;
-        transition: 0.3s;
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: transform 0.3s;
         /* border-bottom: 3px solid red; */
       }
       #header .main > li > a:hover::after {
-        width: 100%;
+        transform-origin: left;
+        transform: scaleX(1);
       }
 
       #header .main a:hover {
