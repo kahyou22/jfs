@@ -1,0 +1,50 @@
+const home = document.getElementById("home");
+
+function div12(n) {
+  return n > 12 ? n - 12 : n;
+}
+
+function ampm(n) {
+  return n >= 12 ? "pm" : "am";
+}
+
+function format02d(n) {
+  return n < 10 ? "0" + n : n;
+}
+
+function digitalClock() {
+  const date = new Date();
+  let day;
+
+  if (date.getDay() == 0) {
+    day = "일";
+  } else if (date.getDay() == 1) {
+    day = "월";
+  } else if (date.getDay() == 2) {
+    day = "화";
+  } else if (date.getDay() == 3) {
+    day = "수";
+  } else if (date.getDay() == 4) {
+    day = "목";
+  } else if (date.getDay() == 5) {
+    day = "금";
+  } else if (date.getDay() == 6) {
+    day = "토";
+  }
+
+  let hour = date.getHours();
+
+  let clock = "";
+  clock += date.getFullYear() + "년 ";
+  clock += date.getMonth() + 1 + "월 ";
+  clock += date.getDate() + "일 ";
+  clock += "(" + day + ") ";
+  clock += ampm(hour) + " " + format02d(div12(date.getHours())) + ":";
+  clock += format02d(date.getMinutes()) + ":";
+  clock += format02d(date.getSeconds());
+
+  home.innerHTML = "<h2>" + clock + "</h2>";
+}
+
+digitalClock();
+setInterval(digitalClock, 1000);

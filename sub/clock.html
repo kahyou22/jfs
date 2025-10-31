@@ -10,6 +10,14 @@
     <script>
       const clockEl = document.getElementById("clock");
 
+      function div12(n) {
+        return n > 12 ? n - 12 : n;
+      }
+
+      function ampm(n) {
+        return n >= 12 ? "pm" : "am";
+      }
+
       function format02d(n) {
         return n < 10 ? "0" + n : n;
       }
@@ -34,12 +42,18 @@
           day = "토";
         }
 
-        let clockHTML = "";
-        clockHTML += format02d(date.getHours()) + ":";
-        clockHTML += format02d(date.getMinutes()) + ":";
-        clockHTML += format02d(date.getSeconds()) + "";
+        let hour = date.getHours();
 
-        clockEl.innerHTML = clockHTML;
+        let clock = "";
+        clock += date.getFullYear() + "년 ";
+        clock += date.getMonth() + 1 + "월 ";
+        clock += date.getDate() + "일 ";
+        clock += "(" + day + ") ";
+        clock += ampm(hour) + " " + format02d(div12(date.getHours())) + ":";
+        clock += format02d(date.getMinutes()) + ":";
+        clock += format02d(date.getSeconds());
+
+        clockEl.innerHTML = clock;
       }
 
       digitalClock();

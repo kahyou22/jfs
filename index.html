@@ -52,43 +52,6 @@
       </div>
       <p>&copy; 2025 JMJ. All rights reserved.</p>
     </footer>
-    <script>
-      const home = document.getElementById("home");
-
-      function format02d(n) {
-        return n < 10 ? "0" + n : n;
-      }
-
-      function digitalClock() {
-        const date = new Date();
-        let day;
-
-        if (date.getDay() == 0) {
-          day = "일";
-        } else if (date.getDay() == 1) {
-          day = "월";
-        } else if (date.getDay() == 2) {
-          day = "화";
-        } else if (date.getDay() == 3) {
-          day = "수";
-        } else if (date.getDay() == 4) {
-          day = "목";
-        } else if (date.getDay() == 5) {
-          day = "금";
-        } else if (date.getDay() == 6) {
-          day = "토";
-        }
-
-        let clockHTML = "<h2>";
-        clockHTML += format02d(date.getHours()) + ":";
-        clockHTML += format02d(date.getMinutes()) + ":";
-        clockHTML += format02d(date.getSeconds()) + "";
-        clockHTML += "</h2>";
-        home.innerHTML = clockHTML;
-      }
-
-      digitalClock();
-      setInterval(digitalClock, 1000);
-    </script>
+    <script src="./js/clock.js"></script>
   </body>
 </html>
