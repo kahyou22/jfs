@@ -1,4 +1,4 @@
-const home = document.getElementById("home");
+const clockEl = document.getElementById("clock");
 
 function div12(n) {
   return n > 12 ? n - 12 : n;
@@ -43,7 +43,7 @@ function digitalClock() {
   clock += format02d(date.getMinutes()) + ":";
   clock += format02d(date.getSeconds());
 
-  home.innerHTML = "<h2>" + clock + "</h2>";
+  clockEl.innerHTML = clock;
 }
 
 digitalClock();

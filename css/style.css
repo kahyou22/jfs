@@ -21,6 +21,11 @@
   scroll-behavior: smooth;
 }
 
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 body,
 h1,
 h2,
@@ -150,9 +155,29 @@ footer .top-btn i {
     no-repeat 50% 50% / cover fixed;
 }
 
+#home .circle-ani {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 141px;
+  height: 140px;
+  /* transition: 5s linear; */
+  animation: circle 10s linear infinite;
+}
+
+@keyframes circle {
+  0% {
+    transform: scale(1.5) rotate(0deg);
+  }
+  100% {
+    transform: scale(1.5) rotate(720deg);
+  }
+}
+
 #home h2 {
   padding: 12px 24px;
-  background: #555;
+  background: #5555;
+  border-radius: 16px;
 }
 
 #contact {
