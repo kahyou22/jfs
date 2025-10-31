@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>변환: rotate 3D</title>
+    <style>
+      .parent {
+        perspective: 100%;
+        border: 2px solid;
+      }
+      .parent div {
+        width: 100px;
+        height: 100px;
+        background: maroon;
+        margin: 50px;
+        transition: 0.3s;
+        border-radius: 50%;
+      }
+
+      .parent:hover .box1 {
+        transform: rotateX(180deg);
+      }
+
+      .parent:hover .box2 {
+        transform: rotateY(180deg);
+      }
+
+      .parent:hover .box3 {
+        transform: rotateZ(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="box1">rotateX</div>
+    </div>
+    <div class="parent">
+      <div class="box2">rotateY</div>
+    </div>
+    <div class="parent">
+      <div class="box3">rotateY</div>
+    </div>
+  </body>
+</html>

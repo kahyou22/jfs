@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>변환: skew</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background: orange;
+        transition: 0.3s;
+      }
+
+      div:hover {
+        transform: skew(0deg, 0deg);
+        transform: skew(10deg, 0deg);
+        transform: skew(0deg, 10deg);
+        transform: skewX(0deg) skewY(10deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div>박스</div>
+  </body>
+</html>
