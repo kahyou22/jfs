@@ -11,12 +11,12 @@
 
       .clock {
         position: relative;
-        width: 150px;
-        height: 150px;
+        width: 200px;
+        height: 200px;
         border-radius: 50%;
       }
 
-      .clock .hours {
+      .clock .hour-list {
         --start-angle: -90deg;
         --angle1: calc(var(--start-angle) + 30deg * 1);
         --angle2: calc(var(--start-angle) + 30deg * 2);
@@ -45,13 +45,6 @@
 
         /* 숫자 위치 조절용 회전 */
         transform: translate(-50%, -50%) rotate(var(--angle));
-      }
-
-      .clock .hour .h {
-        display: inline-block;
-
-        /* 회전된 숫자 정상화 */
-        transform: rotate(calc(0deg - var(--angle)));
       }
 
       .clock .hour:nth-child(1) {
@@ -102,6 +95,13 @@
         --angle: var(--angle12);
       }
 
+      .clock .hour .num {
+        display: inline-block;
+
+        /* 회전된 숫자 정상화 */
+        transform: rotate(calc(0deg - var(--angle)));
+      }
+
       .lines {
         position: absolute;
         top: 50%;
@@ -119,32 +119,36 @@
 
       .lines .line.h {
         background-color: red;
+        width: 55%;
       }
 
       .lines .line.m {
         background-color: blue;
+        width: 75%;
       }
 
       .lines .line.s {
         background-color: green;
+        width: 95%;
+        height: 2px;
       }
     </style>
   </head>
   <body>
     <div class="clock">
-      <div class="hours">
-        <div class="hour"><div class="h">1</div></div>
-        <div class="hour"><div class="h">2</div></div>
-        <div class="hour"><div class="h">3</div></div>
-        <div class="hour"><div class="h">4</div></div>
-        <div class="hour"><div class="h">5</div></div>
-        <div class="hour"><div class="h">6</div></div>
-        <div class="hour"><div class="h">7</div></div>
-        <div class="hour"><div class="h">8</div></div>
-        <div class="hour"><div class="h">9</div></div>
-        <div class="hour"><div class="h">10</div></div>
-        <div class="hour"><div class="h">11</div></div>
-        <div class="hour"><div class="h">12</div></div>
+      <div class="hour-list">
+        <div class="hour"><div class="num">1</div></div>
+        <div class="hour"><div class="num">2</div></div>
+        <div class="hour"><div class="num">3</div></div>
+        <div class="hour"><div class="num">4</div></div>
+        <div class="hour"><div class="num">5</div></div>
+        <div class="hour"><div class="num">6</div></div>
+        <div class="hour"><div class="num">7</div></div>
+        <div class="hour"><div class="num">8</div></div>
+        <div class="hour"><div class="num">9</div></div>
+        <div class="hour"><div class="num">10</div></div>
+        <div class="hour"><div class="num">11</div></div>
+        <div class="hour"><div class="num">12</div></div>
       </div>
       <div class="lines" id="lines">
         <div class="line h"></div>
@@ -157,13 +161,16 @@
 
       setInterval(function () {
         const now = new Date();
-        const s = (now.getSeconds() / 60) * 360;
+        
+        let startAngle = -90;
+        const h = (now.getHours() / 12) * 360 + startAngle;
+        const m = (now.getMinutes() / 60) * 360 + startAngle;
+        const s = (now.getSeconds() / 60) * 360 + startAngle;
 
         let html = "";
-        html +=
-          '<div class="line s" style="transform: rotate(calc(' +
-          s +
-          'deg - 90deg))"></div>';
+        html += '<div class="line h" style="transform: rotate(' + h + 'deg)"></div>';
+        html += '<div class="line m" style="transform: rotate(' + m + 'deg)"></div>';
+        html += '<div class="line s" style="transform: rotate(' + s + 'deg)"></div>';
 
         linesEl.innerHTML = html;
       });
