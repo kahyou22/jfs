@@ -40,11 +40,12 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        width: 100%;
+        width: 50%;
         text-align: right;
 
         /* 숫자 위치 조절용 회전 */
-        transform: translate(-50%, -50%) rotate(var(--angle));
+        transform: translate(0, -50%) rotate(var(--angle));
+        transform-origin: left;
       }
 
       .clock .hour:nth-child(1) {
@@ -98,11 +99,11 @@
       .clock .hour .num {
         display: inline-block;
 
-        /* 회전된 숫자 정상화 */
+        /** 부모 .hour에 의해 같이 회전된 숫자를 회전한 각도만큼 빼서 정상화 */
         transform: rotate(calc(0deg - var(--angle)));
       }
 
-      .lines {
+      .clock .line-list {
         position: absolute;
         top: 50%;
         right: 50%;
@@ -110,24 +111,24 @@
         width: 50%;
       }
 
-      .lines .line {
+      .clock .line-list .line {
         position: absolute;
         width: 100%;
         height: 3px;
         transform-origin: left;
       }
 
-      .lines .line.h {
+      .clock .line-list .line.h {
         background-color: red;
         width: 55%;
       }
 
-      .lines .line.m {
+      .clock .line-list .line.m {
         background-color: blue;
         width: 75%;
       }
 
-      .lines .line.s {
+      .clock .line-list .line.s {
         background-color: green;
         width: 95%;
         height: 2px;
@@ -150,14 +151,14 @@
         <div class="hour"><div class="num">11</div></div>
         <div class="hour"><div class="num">12</div></div>
       </div>
-      <div class="lines" id="lines">
+      <div class="line-list" id="lineList">
         <div class="line h"></div>
         <div class="line m"></div>
         <div class="line s"></div>
       </div>
     </div>
     <script>
-      const linesEl = document.getElementById("lines");
+      const lineListEl = document.getElementById("lineList");
 
       setInterval(function () {
         const now = new Date();
@@ -172,7 +173,7 @@
         html += '<div class="line m" style="transform: rotate(' + m + 'deg)"></div>';
         html += '<div class="line s" style="transform: rotate(' + s + 'deg)"></div>';
 
-        linesEl.innerHTML = html;
+        lineListEl.innerHTML = html;
       });
     </script>
   </body>
