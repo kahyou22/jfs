@@ -1,7 +1,14 @@
 const clockEl = document.getElementById("clock");
 
-function div12(n) {
-  return n > 12 ? n - 12 : n;
+function convert12hours(n) {
+  // return n > 12 ? n - 12 : n;
+  if (n > 12) {
+    n -= 12;
+  }
+  if (n == 0) {
+    n = 12;
+  }
+  return n;
 }
 
 function ampm(n) {
@@ -39,7 +46,7 @@ function digitalClock() {
   clock += date.getMonth() + 1 + "월 ";
   clock += date.getDate() + "일 ";
   clock += "(" + day + ") ";
-  clock += ampm(hour) + " " + format02d(div12(date.getHours())) + ":";
+  clock += ampm(hour) + " " + format02d(convert12hours(date.getHours())) + ":";
   clock += format02d(date.getMinutes()) + ":";
   clock += format02d(date.getSeconds());
 
