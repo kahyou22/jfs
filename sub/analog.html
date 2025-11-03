@@ -160,7 +160,7 @@
     <script>
       const lineListEl = document.getElementById("line-list");
 
-      setInterval(function () {
+      function updateClock() {
         const now = new Date();
 
         let startAngle = -90;
@@ -177,7 +177,10 @@
           '<div class="line s" style="transform: rotate(' + s + 'deg)"></div>';
 
         lineListEl.innerHTML = html;
-      }, 500);
+      }
+
+      updateClock();
+      setInterval(updateClock, 500);
     </script>
   </body>
 </html>
