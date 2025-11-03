@@ -162,19 +162,22 @@
 
       setInterval(function () {
         const now = new Date();
-        
+
         let startAngle = -90;
         const h = (now.getHours() / 12) * 360 + startAngle;
         const m = (now.getMinutes() / 60) * 360 + startAngle;
         const s = (now.getSeconds() / 60) * 360 + startAngle;
 
         let html = "";
-        html += '<div class="line h" style="transform: rotate(' + h + 'deg)"></div>';
-        html += '<div class="line m" style="transform: rotate(' + m + 'deg)"></div>';
-        html += '<div class="line s" style="transform: rotate(' + s + 'deg)"></div>';
+        html +=
+          '<div class="line h" style="transform: rotate(' + h + 'deg)"></div>';
+        html +=
+          '<div class="line m" style="transform: rotate(' + m + 'deg)"></div>';
+        html +=
+          '<div class="line s" style="transform: rotate(' + s + 'deg)"></div>';
 
         lineListEl.innerHTML = html;
-      });
+      }, 500);
     </script>
   </body>
 </html>
