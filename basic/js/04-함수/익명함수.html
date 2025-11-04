@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS: 함수</title>
+  </head>
+  <body>
+    <script>
+      const txt1 = "함수 선언 전 호출";
+      const txt2 = "함수 선언 후 호출";
+
+      printMsg(txt1);
+
+      var printMsg = function (msg) {
+        document.write("익명함수: " + msg + "<br>");
+      };
+      function printMsg(msg) {
+        document.write("선언적함수: " + msg + "<br>");
+      }
+
+      printMsg(txt2);
+
+      function printMsg2(name, age) {
+        document.write(
+          "이름은 " + name + "이고, 나이는 " + name + "살 입니다.<br>"
+        );
+      }
+
+      printMsg2("홍길동", 21);
+    </script>
+  </body>
+</html>

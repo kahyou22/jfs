@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS: for</title>
+  </head>
+  <body>
+    <script>
+      for (let num = 1; num <= 5; num++) {
+        document.write("for문 수행 : " + num + "<br>");
+      }
+
+      const st = "ABCDEF";
+      for (let num = 1, ct = st.length; num < ct; num++) {
+        document.write("문자열로 반복 수행 : " + num + "<br>");
+      }
+      let num = 1,
+        ct = st.length;
+      for (;;) {
+        if (num < ct) {
+          document.write("for(;;) 반복 수행 : " + num + "<br>");
+          num++;
+          continue;
+        }
+        break;
+      }
+    </script>
+  </body>
+</html>
