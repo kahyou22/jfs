@@ -52,6 +52,10 @@ iframe {
 }
 button {
   border: none;
+  cursor: pointer;
+}
+button:hover {
+  background: #ccc;
 }
 
 :root {
@@ -205,6 +209,7 @@ button {
   background: #f1f1f1;
   padding: 12px 24px;
   margin-top: 10px;
+  border-radius: 5px;
 }
 
 #work .parallax-bg {
@@ -212,10 +217,15 @@ button {
 }
 #work .portfolio {
   display: flex;
+  gap: 12px;
 }
 #work .portfolio li {
   width: 216px;
   height: 162px;
+}
+
+#work button {
+  margin: 64px 0 0;
 }
 
 #contact .parallax-bg {
