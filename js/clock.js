@@ -65,14 +65,26 @@ function digitalClock() {
 
   let hour = date.getHours();
 
-  let clock = "";
-  clock += date.getFullYear() + "년 ";
-  clock += date.getMonth() + 1 + "월 ";
-  clock += date.getDate() + "일 ";
-  clock += "(" + day + ") ";
-  clock += ampm(hour) + " " + format02d(convert12hours(date.getHours())) + ":";
-  clock += format02d(date.getMinutes()) + ":";
-  clock += format02d(date.getSeconds());
+  // let clock = "";
+  // clock += date.getFullYear() + "년 ";
+  // clock += format02d(date.getMonth() + 1) + "월 ";
+  // clock += format02d(date.getDate()) + "일 ";
+  // clock += "(" + day + ") ";
+  // clock += ampm(hour) + " " + format02d(convert12hours(date.getHours())) + ":";
+  // clock += format02d(date.getMinutes()) + ":";
+  // clock += format02d(date.getSeconds());
+
+  let y = date.getFullYear();
+  let m = format02d(date.getMonth() + 1);
+  let d = format02d(date.getDate());
+
+  let hour2 = format02d(convert12hours(date.getHours()));
+  let minute = format02d(date.getMinutes());
+  let second = format02d(date.getSeconds());
+
+  let clock = `${y}년 ${m}월 ${d}일(${day})<br>${ampm(
+    hour
+  )} ${hour2}:${minute}:${second}`;
 
   clockEl.innerHTML = clock;
 }
