@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS: 함수 return</title>
+  </head>
+  <body>
+    <script>
+      function add(name, num) {
+        document.write(
+          `${name}이 숫자 <b style="color: red">${num}</b>을(를) 입력하였습니다.<br>`
+        );
+        let sum = (num ** 2 + num) / 2;
+        document.write(`1부터 ${num}까지의 합은 <b>${sum}</b>입니다.<br><br>`);
+        return sum;
+      }
+
+      let result = add("홍길동", 10);
+
+      result = add("박길동", 100);
+
+      function add(x, y) {
+        return x + y;
+      }
+      function sub(x, y) {
+        return x - y;
+      }
+      function mul(x, y) {
+        return x * y;
+      }
+      function div(x, y) {
+        return x / y;
+      }
+      document.write(`------------<br>`);
+      document.write(`${add(5, 2)}<br>`);
+
+      const addition = add;
+      document.write(`${addition(5, 2)}<br>`);
+    </script>
+  </body>
+</html>

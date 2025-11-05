@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Parameter</title>
+  </head>
+  <body>
+    <script>
+      function add0() {
+        const sum = 1;
+        return sum;
+      }
+      function add1(x) {
+        const sum = x + 1;
+        return sum;
+      }
+      function add2(x, y) {
+        const sum = x + y;
+        return sum;
+      }
+      function add3(x, y = 5, z = 10) {
+        const sum = x + y + z;
+        return sum;
+      }
+      function add4(x, y, ...z) {
+        const sum = x + y + z;
+        return sum;
+      }
+
+      document.write(add0() + "<br>");
+      document.write(add1(2) + "<br>");
+      document.write(add2(2, 3) + "<br>");
+      document.write(add3(2, 3, 4) + "<br>");
+      document.write(add4(2, 3, 4, 5) + "<br>");
+
+      function add5(x, y, z) {
+        if (x === undefined) {
+          return 1;
+        } else if (y === undefined) {
+          return x;
+        } else if (z === undefined) {
+          return x + y;
+        }
+        return x + y + z;
+      }
+      document.write(add5() + "<br>");
+      document.write(add5(2) + "<br>");
+      document.write(add5(2, 3) + "<br>");
+      document.write(add5(2, 3, 4) + "<br>");
+
+      function fruit() {
+        console.log(arguments);
+        console.log(arguments[0]);
+        console.log(arguments.length);
+      }
+      fruit("사과", "딸기", "포도", "수박");
+      // document.write(fruit() + "<br>");
+
+      function add() {
+        let sum = 0;
+        for (let i = 0; i < arguments.length; i++) {
+          sum += arguments[i];
+        }
+        return sum;
+      }
+      document.write(add() + "<br>");
+    </script>
+  </body>
+</html>

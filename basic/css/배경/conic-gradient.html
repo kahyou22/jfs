@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>그라디언트(Gradient)</title>
+    <style>
+      /* background-image: linear-gradient([direction], color1, color2, ...); */
+      /* background-image: radial-gradient(shape size at position, start-color, ..., last-color); */
+      p {
+        width: 500px;
+        height: 200px;
+        color: #fff;
+        font-size: 30px;
+      }
+
+      #grad1 {
+        background-image: radial-gradient(red, yellow, green);
+      }
+
+      #grad2 {
+        background-image: radial-gradient(
+          circle,
+          red 5%,
+          yellow 15%,
+          green 60%
+        );
+      }
+
+      #grad3 {
+        background-image: radial-gradient(
+          closest-side at 70% 60%,
+          red,
+          yellow,
+          black
+        );
+      }
+
+      #grad4 {
+        background-image: radial-gradient(
+          farthest-side at 70% 60%,
+          red,
+          yellow,
+          black
+        );
+      }
+
+      #grad5 {
+        background-image: radial-gradient(
+          closest-corner at 70% 60%,
+          red,
+          yellow,
+          black
+        );
+      }
+
+      #grad6 {
+        background-image: radial-gradient(at 70% 60%, red, yellow, black);
+      }
+
+      #grad7 {
+        background-image: repeating-radial-gradient(red, yellow 10%, green 15%);
+      }
+    </style>
+  </head>
+  <body>
+    <p id="grad1">background-image: linear-gradient(to bottom, red, yellow);</p>
+    <p id="grad2">background-image: linear-gradient(to bottom, red, yellow);</p>
+    <p id="grad3">closest-side</p>
+    <p id="grad4">farthest-side</p>
+    <p id="grad5">closest-corner</p>
+    <p id="grad6">farthest-corner</p>
+    <p id="grad7">background-image: linear-gradient(to bottom, red, yellow);</p>
+  </body>
+</html>

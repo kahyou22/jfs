@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>그림자 효과</title>
+    <style>
+      p {
+        font-size: 100px;
+      }
+      .p1 {
+        /* text-shadow: h v [blur] [color]; */
+        /* color: #fff; */
+        text-shadow: 0px 0px 3px red;
+      }
+      .p2 {
+        color: white;
+        text-shadow: 2px 2px 4px #000;
+      }
+      .p3 {
+        text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
+      }
+      .p4 {
+        color: white;
+        text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+      }
+      .p5 {
+        color: coral;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="p1">text-shadow: 2px 2px;</p>
+    <p class="p2">text-shadow: 2px 2px;</p>
+    <p class="p3">text-shadow: 2px 2px;</p>
+    <p class="p4">text-shadow: 2px 2px;</p>
+    <p class="p5">text-shadow: 2px 2px;</p>
+  </body>
+</html>
