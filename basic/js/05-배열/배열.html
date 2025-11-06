@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS: 배열</title>
+  </head>
+  <body>
+    <script>
+      const cities = ["서울", "경기", "인천"];
+
+      console.log(cities);
+      console.log(cities.length);
+
+      function city() {
+        for (let i = 0; i < cities.length; i++) {
+          document.write(cities[i] + "<br>");
+        }
+      }
+
+      cities[3] = "광주";
+      cities[4] = "부산";
+      city();
+
+      const nums = [95, 88, , 72, 68, , 99, 82, 78, 85];
+      document.write(nums.length + "<br>");
+      let sum = 0;
+      let count = 0;
+      for (let i = 0; i < nums.length; i++) {
+        if (nums[i] === undefined) continue;
+        sum += nums[i];
+        count++;
+      }
+      const avg = sum / count;
+      document.write(
+        `총원 ${nums.length}명에서 ${count}명의 합계는 ${sum}점이고 평균은 ${avg}점이다.<br>`
+      );
+
+      const x = 5;
+      const arr = [100, "String", true, x];
+      document.write(arr + "<br>");
+
+      const cities2 = ["서울", "경기", "인천"];
+      const cities3 = new Array("서울", "경기", "인천");
+
+      const str = "서울, 경기, 인천";
+
+      document.write(cities3 + "<br>");
+      document.write(cities3[0] + "<br>");
+      document.write((cities2 == cities2) + "<br>");
+      document.write((cities2 == cities3) + "<br>");
+      document.write((cities3 == cities3) + "<br>");
+
+      document.write((cities2 instanceof Array) + "<br>");
+      document.write(Array.isArray(cities2) + "<br>");
+      document.write(Array.isArray(str) + "<br>");
+    </script>
+  </body>
+</html>
