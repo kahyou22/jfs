@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS: overflow 속성</title>
+    <style>
+      .wrap {
+        display: flex;
+        gap: 30px;
+      }
+      .wrap div {
+        width: 300px;
+        height: 150px;
+        background-color: coral;
+      }
+      .div1 {
+        overflow: visible;
+      }
+      .div2 {
+        overflow: hidden;
+      }
+      .div3 {
+        overflow: scroll;
+      }
+      .div8 {
+        overflow: scroll;
+        overflow-x: hidden;
+      }
+      .div9 {
+        overflow: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+      }
+      .div4 {
+        overflow: auto;
+      }
+      .div5 {
+        overflow: clip;
+      }
+      .div6 {
+        overflow: scroll;
+      }
+      .div7 {
+        overflow: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="div1">
+        visible Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
+        nisi, amet consequuntur qui corporis ut, voluptatem quasi odit, illo
+        nulla consequatur recusandae. Accusamus possimus amet hic ratione, sequi
+        eveniet modi? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Officia, molestias nemo dolor nostrum pariatur ex amet odio error
+        incidunt impedit qui necessitatibus deleniti deserunt expedita cumque
+        esse doloremque temporibus adipisci.
+      </div>
+      <div class="div2">
+        hidden Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
+        nisi, amet consequuntur qui corporis ut, voluptatem quasi odit, illo
+        nulla consequatur recusandae. Accusamus possimus amet hic ratione, sequi
+        eveniet modi? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Officia, molestias nemo dolor nostrum pariatur ex amet odio error
+        incidunt impedit qui necessitatibus deleniti deserunt expedita cumque
+        esse doloremque temporibus adipisci.
+      </div>
+      <div class="div3">
+        scroll Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
+        nisi, amet consequuntur qui corporis ut, voluptatem quasi odit, illo
+        nulla consequatur recusandae. Accusamus possimus amet hic ratione, sequi
+        eveniet modi? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Officia, molestias nemo dolor nostrum pariatur ex amet odio error
+        incidunt impedit qui necessitatibus deleniti deserunt expedita cumque
+        esse doloremque temporibus adipisci.
+      </div>
+      <div class="div8">
+        scroll Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
+        nisi, amet consequuntur qui corporis ut, voluptatem quasi odit, illo
+        nulla consequatur recusandae. Accusamus possimus amet hic ratione, sequi
+        eveniet modi? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Officia, molestias nemo dolor nostrum pariatur ex amet odio error
+        incidunt impedit qui necessitatibus deleniti deserunt expedita cumque
+        esse doloremque temporibus adipisci.
+      </div>
+      <div class="div9">
+        scroll Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
+        nisi, amet consequuntur qui corporis ut, voluptatem quasi odit, illo
+        nulla consequatur recusandae. Accusamus possimus amet hic ratione, sequi
+        eveniet modi? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Officia, molestias nemo dolor nostrum pariatur ex amet odio error
+        incidunt impedit qui necessitatibus deleniti deserunt expedita cumque
+        esse doloremque temporibus adipisci.
+      </div>
+      <div class="div4">
+        auto Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi nisi,
+        amet consequuntur qui corporis ut, voluptatem quasi odit, illo nulla
+        consequatur recusandae. Accusamus possimus amet hic ratione, sequi
+        eveniet modi? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Officia, molestias nemo dolor nostrum pariatur ex amet odio error
+        incidunt impedit qui necessitatibus deleniti deserunt expedita cumque
+        esse doloremque temporibus adipisci.
+      </div>
+      <div class="div5">
+        clip Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi nisi,
+        amet consequuntur qui corporis ut, voluptatem quasi odit, illo nulla
+        consequatur recusandae. Accusamus possimus amet hic ratione, sequi
+        eveniet modi? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Officia, molestias nemo dolor nostrum pariatur ex amet odio error
+        incidunt impedit qui necessitatibus deleniti deserunt expedita cumque
+        esse doloremque temporibus adipisci.
+      </div>
+      <div class="div6">
+        clip Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi nisi,
+        amet consequuntur qui corporis ut, voluptatem quasi odit, illo nulla
+      </div>
+      <div class="div7">
+        clip Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi nisi,
+        amet consequuntur qui corporis ut, voluptatem quasi odit, illo nulla
+      </div>
+    </div>
+  </body>
+</html>

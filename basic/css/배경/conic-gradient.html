@@ -6,7 +6,7 @@
     <title>그라디언트(Gradient)</title>
     <style>
       /* background-image: linear-gradient([direction], color1, color2, ...); */
-      /* background-image: radial-gradient(shape size at position, start-color, ..., last-color); */
+      /* background-image: conic-gradient(shape size at position, start-color, ..., last-color); */
       p {
         width: 500px;
         height: 200px;
@@ -15,51 +15,35 @@
       }
 
       #grad1 {
-        background-image: radial-gradient(red, yellow, green);
+        background-image: conic-gradient(red, yellow, green);
       }
 
       #grad2 {
-        background-image: radial-gradient(
-          circle,
-          red 5%,
-          yellow 15%,
-          green 60%
-        );
+        background-image: conic-gradient(red 45deg, yellow 90deg, green 210deg);
       }
 
       #grad3 {
-        background-image: radial-gradient(
-          closest-side at 70% 60%,
-          red,
-          yellow,
-          black
+        background-image: conic-gradient(
+          red 0deg,
+          red 90deg,
+          yellow 90deg,
+          yellow 180deg,
+          green 180deg,
+          green 270deg,
+          blue 270deg
         );
       }
 
       #grad4 {
-        background-image: radial-gradient(
-          farthest-side at 70% 60%,
-          red,
-          yellow,
-          black
-        );
+        background-image: conic-gradient(from 90deg, red, yellow, green);
       }
 
       #grad5 {
-        background-image: radial-gradient(
-          closest-corner at 70% 60%,
-          red,
-          yellow,
-          black
-        );
+        background-image: conic-gradient(at 60% 45%, red, yellow, green);
       }
 
       #grad6 {
-        background-image: radial-gradient(at 70% 60%, red, yellow, black);
-      }
-
-      #grad7 {
-        background-image: repeating-radial-gradient(red, yellow 10%, green 15%);
+        background-image: repeating-conic-gradient(red, yellow 10%, green 15%);
       }
     </style>
   </head>
@@ -70,6 +54,5 @@
     <p id="grad4">farthest-side</p>
     <p id="grad5">closest-corner</p>
     <p id="grad6">farthest-corner</p>
-    <p id="grad7">background-image: linear-gradient(to bottom, red, yellow);</p>
   </body>
 </html>

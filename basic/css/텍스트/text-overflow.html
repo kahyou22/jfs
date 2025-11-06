@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS: text-overflow</title>
+    <style>
+      div.a {
+        width: 300px;
+        height: 30px;
+        border: 1px solid;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      div.a:hover {
+        /* overflow: visible; */
+        text-overflow: clip;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="a">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit porro
+      possimus laudantium provident accusamus necessitatibus, minus distinctio
+      ipsa, recusandae, tempore quas itaque. Nostrum ipsam quis dolores
+      dignissimos nobis incidunt repudiandae!
+    </div>
+  </body>
+</html>

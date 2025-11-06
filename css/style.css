@@ -193,6 +193,22 @@ footer .top-btn i {
   }
 }
 
+#about .basic p {
+  text-align: left;
+}
+
+#about .basic .inner {
+  display: flex;
+}
+
+#about .basic .inner div {
+  flex: 50%;
+}
+
+#about .basic .inner p {
+  flex: 50%;
+}
+
 .parallax-bg {
   position: relative;
   height: 400px;
