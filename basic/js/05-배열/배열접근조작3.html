@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS: 배열 접근 조작</title>
+  </head>
+  <body>
+    <script>
+      const nums = [];
+
+      function insertFn() {
+        for (let i = 0; i < 100; i++) {
+          nums[i] = i + 1;
+        }
+      }
+
+      function selectFn() {
+        for (let i = 0; i < nums.length; i++) {
+          document.write(`${nums[i]} `);
+        }
+        document.write("<br>");
+      }
+
+      function zeroFn() {
+        for (let i = 0; i < nums.length; i++) {
+          nums[i] = 0;
+        }
+        selectFn();
+        printFn();
+        // document.write("<a href='배열접근조작3.html'>새로고침</a>");
+      }
+      insertFn();
+      selectFn();
+
+      function clearFn() {
+        nums.length = 0;
+        selectFn();
+        printFn();
+      }
+      function printFn() {
+        document.write(`배열 크기: ${nums.length}<br>`);
+        document.write("<a href='배열접근조작3.html'>새로고침</a>");
+      }
+    </script>
+    <button type="button" onclick="zeroFn()">모든 값을 0으로 수정</button
+    ><button type="button" onclick="clearFn()">모든 값 삭제</button>
+  </body>
+</html>

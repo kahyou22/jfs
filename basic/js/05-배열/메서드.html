@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS: 배열 메서드</title>
+  </head>
+  <body>
+    <script>
+      const cities = ["서울", "경기", "인천"];
+
+      document.write(`${cities.join()}<br>`);
+      document.write(`${cities}<br>`);
+      document.write(`${typeof cities.join()}<br>`);
+      document.write(`${cities.join("-")}<br>`);
+      document.write(`${cities.join(" 그리고 ")}<br>`);
+
+      document.write(`----------------------------------<br>`);
+
+      const fruits = ["사과", "딸기", "포도"];
+      const names = ["차길동", "박길동", "김길동"];
+
+      document.write(`${cities.concat("부산", "광주")}<br>`);
+      document.write(`${typeof cities.concat("부산", "광주")}<br>`);
+      document.write(`${cities.concat(fruits).join("-")}<br>`);
+      document.write(`${cities.concat(fruits, names, "부산").join("-")}<br>`);
+
+      document.write(`----------------------------------<br>`);
+
+      const nums = [9, 8, 7, 6, 5, 4, 3, 2, 1];
+      document.write(`${nums}<br>`);
+      document.write(`${nums.reverse()}<br>`);
+      document.write(`${names}<br>`);
+      document.write(`${names.reverse()}<br>`);
+      document.write(`${names}<br>`);
+
+      document.write(`----------------------------------<br>`);
+
+      const ndata1 = [19, 38, 67, 26, 55, 24, 53, 12, 31];
+      const ndata2 = [132, 2, 41, 123, 45, 1234, 6, 29, 4567];
+      const edata = ["Apple", "Html", "Game", "Computer", "Java"];
+      let kdata = ["서울", "부산", "구포", "대구", "인천"];
+      document.write(`${ndata1.sort()}<br>`);
+      document.write(`${ndata2.sort()}<br>`);
+      document.write(`${ndata2.sort((a, b) => a - b)}<br>`);
+      document.write(`${edata.sort()}<br>`);
+      document.write(`${kdata.sort()}<br>`);
+
+      document.write(`----------------------------------<br>`);
+
+      kdata = ["서울", "부산", "구포", "대구", "인천", "대전", "세종"];
+      document.write(`${kdata.slice(0, 4)}<br>`);
+      document.write(`${kdata.slice(-2, -1)}<br>`);
+      document.write(`${kdata.slice(-4, -2)}<br>`);
+    </script>
+  </body>
+</html>

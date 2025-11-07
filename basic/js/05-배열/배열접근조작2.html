@@ -6,18 +6,7 @@
     <title>JS: 배열 접근 조작</title>
   </head>
   <body>
-    <button type="button" onclick="addFn()">1~100까지 합</button>
     <script>
-      function addFn() {
-        selectFn();
-        let sum = 0;
-        for (let i = 0; i < nums.length; i++) {
-          sum += nums[i];
-        }
-        document.write(`1부터 100까지의 합은 ${sum}입니다.<br>`);
-        document.write("<a href='배열접근조작.html'>새로고침</a>");
-      }
-
       const nums = [];
 
       function insertFn() {
@@ -27,12 +16,22 @@
       }
 
       function selectFn() {
-        insertFn();
         for (let i = 0; i < nums.length; i++) {
           document.write(`${nums[i]} `);
         }
         document.write("<br>");
       }
+
+      function zeroFn() {
+        for (let i = 0; i < nums.length; i++) {
+          if (i % 2 === 0) nums[i] = 0;
+        }
+        selectFn();
+        document.write("<a href='배열접근조작2.html'>새로고침</a>");
+      }
+      insertFn();
+      selectFn();
     </script>
+    <button type="button" onclick="zeroFn()">홀수 값은 0으로 수정</button>
   </body>
 </html>

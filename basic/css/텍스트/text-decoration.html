@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS: text-decoration</title>
+    <style>
+      div.a {
+        text-decoration: overline;
+      }
+
+      div.b {
+        text-decoration: line-through;
+      }
+
+      div.c {
+        text-decoration: underline;
+      }
+
+      div.d {
+        text-decoration: underline overline;
+      }
+
+      a {
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline wavy;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="a">overline</div>
+    <div class="b">line-through</div>
+    <div class="c">underline</div>
+    <div class="d">underline overline</div>
+    <!-- <u>underline</u>
+    <ins>underline</ins>
+    <s>line-through</s>
+    <del>line-through</del> -->
+    <a href="#">a태그의 경우 기본이 밑줄</a>
+  </body>
+</html>
