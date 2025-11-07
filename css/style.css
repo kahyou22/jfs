@@ -209,6 +209,47 @@ footer .top-btn i {
   flex: 50%;
 }
 
+#about .skill .inner p {
+  text-align: left;
+}
+
+#about .progressbar {
+  background: #f1f1f1;
+  color: #fff;
+}
+
+#about .progressbar div {
+  /* line-height: 35px; */
+  /* height: 35px; */
+  padding: 6px;
+  background: #616161;
+}
+
+#about .progressbar:nth-of-type(1) div {
+  width: 85%;
+}
+
+#about .progressbar:nth-of-type(2) div {
+  width: 95%;
+}
+
+#about .count ul {
+  display: flex;
+  text-align: center;
+  background: #616161;
+  height: 135px;
+  color: #fff;
+}
+
+#about .count ul li {
+  flex: 25%;
+}
+
+#about .count span {
+  display: block;
+  font-size: 2.4rem;
+}
+
 .parallax-bg {
   position: relative;
   height: 400px;
