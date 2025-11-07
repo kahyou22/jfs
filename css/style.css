@@ -196,9 +196,29 @@ footer .top-btn i {
 #about .basic p {
   text-align: left;
 }
+#about .basic strong {
+  text-decoration: underline 2px wavy rgba(255, 0, 0, 0.5);
+}
+
+#about .basic b {
+  display: inline-block;
+  padding-bottom: 36px;
+}
+
+#about .basic img {
+  filter: opacity(50%);
+  height: 280px;
+  border-radius: 5px;
+}
+
+#about .basic img:hover {
+  filter: none;
+}
 
 #about .basic .inner {
   display: flex;
+  gap: 48px;
+  margin: 48px 0 130px;
 }
 
 #about .basic .inner div {
@@ -209,8 +229,15 @@ footer .top-btn i {
   flex: 50%;
 }
 
+#about .skill > p {
+  margin-bottom: 36px;
+  font-size: 1.8rem;
+}
+
 #about .skill .inner p {
   text-align: left;
+  letter-spacing: 1rem;
+  margin: 12px 0;
 }
 
 #about .progressbar {
@@ -237,8 +264,8 @@ footer .top-btn i {
   display: flex;
   text-align: center;
   background: #616161;
-  height: 135px;
   color: #fff;
+  padding: 36px 0;
 }
 
 #about .count ul li {
