@@ -52,6 +52,81 @@
       document.write(`${kdata.slice(0, 4)}<br>`);
       document.write(`${kdata.slice(-2, -1)}<br>`);
       document.write(`${kdata.slice(-4, -2)}<br>`);
+
+      document.write(`----------------------------------<br>`);
+
+      document.write(`${kdata}<br>`);
+      document.write(`${kdata.slice(1, 3)}<br>`);
+      document.write(`${kdata.splice(1, 2)}<br>`);
+      document.write(`${kdata.splice(1, 1, "수원", "용인")}<br>`);
+      document.write(`${kdata.splice(2, Number.MAX_VALUE)}<br>`);
+
+      document.write(`----------------------------------<br>`);
+
+      kdata = ["서울", "부산", "구포", "대구", "인천"];
+      document.write(`${kdata.push("청주", "세종")}<br>`);
+      document.write(`${kdata}<br>`);
+      document.write(`${kdata.pop()}<br>`);
+      document.write(`${kdata.unshift("경기", "세종")}<br>`);
+      document.write(`${kdata}<br>`);
+      document.write(`${kdata.shift()}<br>`);
+
+      delete kdata[0];
+      // delete kdata[1];
+      delete kdata[2];
+      // delete kdata[3];
+      delete kdata[4];
+      // delete kdata[5];
+      delete kdata[6];
+      for (let i = 0; i < kdata.length; i++) {
+        // delete kdata[i];
+        document.write(`[${i}] : ${kdata[i]}<br>`);
+      }
+      document.write(`${kdata}<br>`);
+
+      document.write(`----------------------------------<br>`);
+
+      kdata = ["서울", "부산", "청주", "대구"];
+      function printArr(item, index) {
+        document.write(`배열 데이터 [${index}] : ${item}`);
+      }
+      for (let i = 0; i < kdata.length; i++) {
+        printArr(kdata[i], i);
+      }
+      for (const val of kdata) {
+        printArr(val);
+      }
+      kdata.forEach(printArr);
+
+      let datas = [1, 2, 3, 4, 5, 3, 7, 8, 3, 10];
+      let sum = 0;
+      datas.forEach(function (val) {
+        sum += val;
+      });
+      document.write(`${sum}<br>`);
+
+      document.write(`----------------------------------<br>`);
+
+      document.write(
+        `${datas.map(function (val) {
+          return val ** 2;
+        })}<br>`
+      );
+
+      document.write(`----------------------------------<br>`);
+
+      document.write(
+        `${datas.filter(function (val) {
+          return val >= 6;
+        })}<br>`
+      );
+
+      document.write(`----------------------------------<br>`);
+
+      document.write(`${datas.indexOf(3)}<br>`);
+      document.write(`${datas.indexOf(3, 2)}<br>`);
+      document.write(`${datas.lastIndexOf(3)}<br>`);
+      document.write(`${datas.lastIndexOf(3, 3)}<br>`);
     </script>
   </body>
 </html>
