@@ -193,6 +193,11 @@ footer .top-btn i {
   }
 }
 
+#about .parallax-bg {
+  background-image: url(./../assets/img/bg-about.jpg);
+  background-position: 50% 70%;
+}
+
 #about .basic p {
   text-align: left;
 }
@@ -325,6 +330,7 @@ button {
 
 #contact .parallax-bg {
   background-image: url(./../assets/img/parallax3.jpg);
+  background-position: 50% 100%;
 }
 #contact .container {
   display: flex;
@@ -339,6 +345,7 @@ button {
 }
 #contact .contact {
   width: 600px;
+  text-align: left;
 }
 #contact .contact p {
   margin: 24px 0 16px;
