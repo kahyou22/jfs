@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>아날로그 시계</title>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      .clock {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+      }
+
+      .clock .hour-list {
+        --start-angle: -90deg;
+        --angle1: calc(var(--start-angle) + 30deg * 1);
+        --angle2: calc(var(--start-angle) + 30deg * 2);
+        --angle3: calc(var(--start-angle) + 30deg * 3);
+        --angle4: calc(var(--start-angle) + 30deg * 4);
+        --angle5: calc(var(--start-angle) + 30deg * 5);
+        --angle6: calc(var(--start-angle) + 30deg * 6);
+        --angle7: calc(var(--start-angle) + 30deg * 7);
+        --angle8: calc(var(--start-angle) + 30deg * 8);
+        --angle9: calc(var(--start-angle) + 30deg * 9);
+        --angle10: calc(var(--start-angle) + 30deg * 10);
+        --angle11: calc(var(--start-angle) + 30deg * 11);
+        --angle12: calc(var(--start-angle) + 30deg * 12);
+
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+
+      .clock .hour {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 50%;
+        text-align: right;
+
+        /* 숫자 위치 조절용 회전 */
+        transform: translate(0, -50%) rotate(var(--angle));
+        transform-origin: left;
+      }
+
+      .clock .hour:nth-child(1) {
+        --angle: var(--angle1);
+      }
+
+      .clock .hour:nth-child(2) {
+        --angle: var(--angle2);
+      }
+
+      .clock .hour:nth-child(3) {
+        --angle: var(--angle3);
+      }
+
+      .clock .hour:nth-child(4) {
+        --angle: var(--angle4);
+      }
+
+      .clock .hour:nth-child(5) {
+        --angle: var(--angle5);
+      }
+
+      .clock .hour:nth-child(6) {
+        --angle: var(--angle6);
+      }
+
+      .clock .hour:nth-child(7) {
+        --angle: var(--angle7);
+      }
+
+      .clock .hour:nth-child(8) {
+        --angle: var(--angle8);
+      }
+
+      .clock .hour:nth-child(9) {
+        --angle: var(--angle9);
+      }
+
+      .clock .hour:nth-child(10) {
+        --angle: var(--angle10);
+      }
+
+      .clock .hour:nth-child(11) {
+        --angle: var(--angle11);
+      }
+
+      .clock .hour:nth-child(12) {
+        --angle: var(--angle12);
+      }
+
+      .clock .hour .num {
+        display: inline-block;
+
+        /** 부모 .hour에 의해 같이 회전된 숫자를 회전한 각도만큼 빼서 정상화 */
+        transform: rotate(calc(0deg - var(--angle)));
+      }
+
+      .clock .line-list {
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(100%);
+        width: 50%;
+      }
+
+      .clock .line-list .line {
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        transform-origin: left;
+      }
+
+      .clock .line-list .line.h {
+        background-color: red;
+        width: 55%;
+      }
+
+      .clock .line-list .line.m {
+        background-color: blue;
+        width: 75%;
+      }
+
+      .clock .line-list .line.s {
+        background-color: green;
+        width: 95%;
+        height: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="clock">
+      <div class="hour-list">
+        <div class="hour"><div class="num">1</div></div>
+        <div class="hour"><div class="num">2</div></div>
+        <div class="hour"><div class="num">3</div></div>
+        <div class="hour"><div class="num">4</div></div>
+        <div class="hour"><div class="num">5</div></div>
+        <div class="hour"><div class="num">6</div></div>
+        <div class="hour"><div class="num">7</div></div>
+        <div class="hour"><div class="num">8</div></div>
+        <div class="hour"><div class="num">9</div></div>
+        <div class="hour"><div class="num">10</div></div>
+        <div class="hour"><div class="num">11</div></div>
+        <div class="hour"><div class="num">12</div></div>
+      </div>
+      <div class="line-list" id="line-list">
+        <div class="line h"></div>
+        <div class="line m"></div>
+        <div class="line s"></div>
+      </div>
+    </div>
+    <script>
+      const lineListEl = document.getElementById("line-list");
+
+      function updateClock() {
+        const now = new Date();
+
+        let startAngle = -90;
+        const h = (now.getHours() / 12) * 360 + startAngle;
+        const m = (now.getMinutes() / 60) * 360 + startAngle;
+        const s = (now.getSeconds() / 60) * 360 + startAngle;
+
+        let html = `
+          <div class="line h" style="transform: rotate(${h}deg)"></div>
+          <div class="line m" style="transform: rotate(${m}deg)"></div>
+          <div class="line s" style="transform: rotate(${s}deg)"></div>
+        `;
+
+        lineListEl.innerHTML = html;
+      }
+
+      updateClock();
+      setInterval(updateClock, 500);
+    </script>
+  </body>
+</html>
