@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>시간 기반 다크모드</title>
+    <style>
+      body {
+        font-family: "Noto Sans KR", sans-serif;
+        background-color: #ffffff;
+        color: #222;
+        transition: background-color 0.3s, color 0.3s;
+        text-align: center;
+        padding: 60px;
+      }
+
+      button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+
+      /* 다크모드 */
+      body.dark {
+        background-color: #121212;
+        color: #e0e0e0;
+      }
+
+      body.dark button {
+        background-color: #444;
+      }
+
+      body.dark button:hover {
+        background-color: #666;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>시간 기반 다크모드 예제</h1>
+      <p id="info"></p>
+      <button id="toggle-btn">🌙 다크 모드 전환</button>
+    </div>
+
+    <script>
+      // const body = document.body;
+      const body = document.querySelector("body");
+      const info = document.getElementById("info");
+      const toggleBtn = document.getElementById("toggle-btn");
+
+      // 현재 시각에 따라 자동 적용
+      function applyThemeByTime() {
+        const now = new Date();
+        const hour = now.getHours();
+
+        // 19시(7PM) ~ 7시(7AM) 사이는 다크모드
+        if (hour >= 15 || hour < 7) {
+          /* 
+                    객체.classList.add('클래스'): 클래스 추가
+                    객체.classList.remove('클래스'): 클래스 제거
+                    객체.classList.toggle('클래스'): add와 remove를 번갈아 적용!
+                    객체.classList.contains('클래스'): 
+                        - 클래스 포함 여부 확인
+                        - 클래스가 존재하면 true, 아니면 false
+                */
+          // <body class="dark">
+          body.classList.add("dark");
+          info.textContent = `현재 시각: ${hour}시 → 다크모드 자동 적용 🌙`;
+          toggleBtn.textContent = "☀️ 라이트 모드 전환";
+        } else {
+          // <body class="">
+          body.classList.remove("dark");
+          info.textContent = `현재 시각: ${hour}시 → 라이트모드 적용 ☀️`;
+          toggleBtn.textContent = "🌙 다크 모드 전환";
+        }
+      }
+
+      // 수동 전환 (자동 모드와 별개)
+      // 이벤트 처리
+      // 이벤트의 종류: click
+      // 이벤트 형식: 객체.addEventListener();
+      // 이벤트 형식: 객체.addEventListener(인자1, 인자2);
+      // 이벤트 형식: 객체.addEventListener(이벤트명, 콜백함수);
+      // 이벤트 형식: 객체.addEventListener('이벤트명', funciton(){});
+      // 이벤트 형식: 객체.addEventListener('이벤트명', ()=>{});
+      // 버튼을 클릭하면 함수를 실행~
+      toggleBtn.addEventListener("click", () => {
+        // <body class="">
+        body.classList.toggle("dark");
+        // <body class=""> -> false
+        // <body class="dark"> -> true
+        const isDark = body.classList.contains("dark");
+        toggleBtn.textContent = isDark
+          ? "☀️ 라이트 모드 전환"
+          : "🌙 다크 모드 전환";
+        info.textContent = isDark
+          ? "사용자 설정: 다크모드 🌙"
+          : "사용자 설정: 라이트모드 ☀️";
+      });
+
+      // 페이지 로드 시 자동 설정
+      applyThemeByTime();
+    </script>
+  </body>
+</html>

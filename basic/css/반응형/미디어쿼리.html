@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반응형 미디어쿼리</title>
+    <style>
+      /* 
+            미디어쿼리 형식:
+                @media (조건) {
+                    CSS 기록
+                } 
+                조건:
+                    min-width: 값;
+                    max-width: 값;
+            
+            장치
+                - 데스크탑 PC(1920)
+                - 테블릿 PC(768)
+                - 폰(가지고 있는 폰, 360), ...
+            장치의 화면 해상도(resolution)
+
+            브레이크 포인트(break point, 중단점)
+                - 크롬 브라우저: 320, 375, 425, 768, 1024, 1440, 2560(4k)
+                - 부트스트랩 프레임워크: 576, 768, 992, 1200, 1400
+                - 화면 해상도 순위: https://gs.statcounter.com/screen-resolution-stats
+
+            부트스트랩: https://getbootstrap.kr/
+        */
+
+      /* 모든 장치: 폰(360px) */
+      body {
+        background: lightblue;
+      }
+
+      /* orientation: portrait (세로) */
+      /* orientation: landscape (가로) */
+      /* 최대 767px -> 767px 이하의 장치 중 + 가로 방향 */
+      @media (max-width: 767px) and (orientation: landscape) {
+        body {
+          background: lightseagreen;
+        }
+      }
+
+      /* 최소 768px -> 768px 이상의 장치: 테블릿(768px), 데스크탑(1920px) */
+      @media (min-width: 768px) {
+        /* CSS 기록 */
+        body {
+          background: lightcoral;
+        }
+      }
+
+      /* 최소 1024px -> 1024px 이상의 장치: 데스크탑 */
+      @media (min-width: 1024px) {
+        /* CSS 기록 */
+        body {
+          background: lightgoldenrodyellow;
+        }
+      }
+    </style>
+  </head>
+
+  <body></body>
+</html>

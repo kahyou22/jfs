@@ -162,12 +162,19 @@ footer .top-btn i {
   margin-right: 8px;
 }
 
-#home {
+#home .bgimg {
   position: relative;
   height: 100vh;
   overflow: hidden;
-  background: url(./../assets/img/marita-kavelashvili-ugnrXk1129g-unsplash.jpg)
-    no-repeat 50% 50% / cover fixed;
+  background: url(/jfs/assets/img/light.jpg) no-repeat 50% 50% / cover fixed;
+}
+
+#home.dark .bgimg {
+  filter: brightness(40%);
+  background-image: url(/jfs/assets/img/dark.jpg);
+}
+#home.dark h2 {
+  text-shadow: 1px 1px 5px red, 0 0 25px red, 0 0 35px red;
 }
 #home h2 {
   padding: 12px 24px;
