@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS: 객체</title>
+  </head>
+  <body>
+    <h2>[Hong's Car]</h2>
+    <p>자동차 이름: <span>name</span></p>
+    <p>자동차 색상: <span>color</span></p>
+    <p>자동차 속도: <span>speed</span></p>
+    <h2>[Kim's Car]</h2>
+    <p>name: <span>name</span></p>
+    <p>color: <span>color</span></p>
+    <p>speed: <span>speed</span></p>
+    <p>price: <span>price</span></p>
+
+    <script>
+      function Car(name, color, speed) {
+        this.name = name;
+        this.color = color;
+        this.speed = speed;
+        this.speedUp = function () {
+          return (this.speed += 10);
+        };
+        this.speedDown = function () {
+          return (this.speed -= 10);
+        };
+      }
+
+      const hongCar = new Car("Sonata", "blue", 100);
+      const kimCar = new Car("Jeep", "red", 70);
+
+      const carName = document.querySelector("p:nth-of-type(1) span");
+      const carColor = document.querySelector("p:nth-of-type(2) span");
+      const carSpeed = document.querySelector("p:nth-of-type(3) span");
+
+      const carName2 = document.querySelector("p:nth-of-type(4) span");
+      const carColor2 = document.querySelector("p:nth-of-type(5) span");
+      const carSpeed2 = document.querySelector("p:nth-of-type(6) span");
+      const carPrice2 = document.querySelector("p:nth-of-type(7) span");
+
+      carName.textContent = hongCar.name;
+      carColor.textContent = hongCar.color;
+      carSpeed.textContent = hongCar.speedUp();
+
+      carName2.textContent = kimCar.name;
+      carColor2.textContent = kimCar.color;
+      carSpeed2.textContent = kimCar.speedUp();
+
+      delete kimCar.color;
+      kimCar.price = "3천만 원";
+
+      carColor2.textContent = kimCar.color;
+      carPrice2.textContent = kimCar.price;
+    </script>
+  </body>
+</html>

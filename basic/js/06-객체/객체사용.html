@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS: 객체</title>
+  </head>
+  <body>
+    <p id="var1">아이디1: getElementById</p>
+    <p id="var2">아이디2: querySelector</p>
+    <p class="var3">클래스3: getElementsByClassName</p>
+    <p class="var4">클래스4: querySelectorAll</p>
+    <p>태그5: getElementsByTagName</p>
+
+    <script>
+      const car = {
+        name: "소나타",
+        speed: 100,
+        color: "white",
+        start: function () {
+          return `${this.name}이(가) 출발합니다.`;
+        },
+        stop: function (a) {
+          return `속도가 100에서 ${a}로 줄었습니다.`;
+        },
+        accel: function (a, b) {
+          return `속도가 ${a}에서 ${b}로 가속되었습니다.`;
+        },
+      };
+
+      const var1 = document.getElementById("var1");
+      const var2 = document.querySelector("#var2");
+      const var3 = document.getElementsByClassName("var3")[0];
+      const var4 = document.querySelectorAll(".var4")[0];
+      const var5 = document.getElementsByTagName("p")[4];
+
+      var1.innerHTML = `${car.name}`;
+      var2.innerHTML = `${car.speed}`;
+      var3.innerHTML = `${car.start()}`;
+      var4.innerHTML = `${car.stop(0)}`;
+      var5.innerHTML = `${car.accel(0, 100)}`;
+    </script>
+  </body>
+</html>
