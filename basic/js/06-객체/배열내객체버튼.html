@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배열내객체</title>
+  </head>
+  <body>
+    <button>한국어</button>
+    <button>영어</button>
+    <div id="car_list"></div>
+    <script>
+      const car = [
+        { item: "자동차", name: "소나타", color: "파랑", speed: 100 },
+        { item: "Car", name: "sonata", color: "blue", speed: 100 },
+      ];
+
+      const car_list = document.getElementById("car_list");
+      const kor_btn = document.querySelectorAll("button")[0];
+      const eng_btn = document.querySelectorAll("button")[1];
+      // for (let i = 0; i < car.length; i++) {
+      //   //
+      // }
+
+      function carFn(i) {
+        car_list.innerHTML = `
+          <h2>${car[i].item}</h2>
+          <p>${car[i].name}</p>
+          <p>${car[i].color}</p>
+          <p>${car[i].speed}</p>
+        `;
+      }
+
+      carFn(0);
+
+      kor_btn.addEventListener("click", function () {
+        carFn(0);
+      });
+      eng_btn.addEventListener("click", function () {
+        carFn(1);
+      });
+    </script>
+  </body>
+</html>

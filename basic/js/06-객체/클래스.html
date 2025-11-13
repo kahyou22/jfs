@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS: 클래스</title>
+  </head>
+  <body>
+    <script>
+      class Car {
+        constructor(name, year) {
+          this.name = name;
+          this.year = year;
+        }
+
+        age() {
+          return new Date().getFullYear() - this.year;
+        }
+      }
+    </script>
+  </body>
+</html>

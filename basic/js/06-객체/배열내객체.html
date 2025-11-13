@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배열내객체</title>
+  </head>
+  <body>
+    <div id="car_list"></div>
+    <script>
+      const car = [
+        { name: "소나타", color: "파랑", speed: 100 },
+        { name: "지프", color: "빨강", speed: 70 },
+        { name: "파사트", color: "흰색", speed: 150 },
+      ];
+
+      const car_list = document.getElementById("car_list");
+      for (let i = 0; i < car.length; i++) {
+        car_list.innerHTML += `
+          <h2>Car${i + 1}</h2>
+          <p>${car[i].name}</p>
+          <p>${car[i].color}</p>
+          <p>${car[i].speed}</p>
+        `;
+      }
+    </script>
+  </body>
+</html>
