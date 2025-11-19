@@ -52,7 +52,7 @@
       <div class="bgimg vh-100"></div>
       <h2
         id="clock"
-        class="position-absolute start-50 top-50 translate-middle text-white"
+        class="ls10px position-absolute start-50 top-50 translate-middle text-white"
       >
         Munju Jeong
       </h2>
@@ -61,9 +61,9 @@
       </div>
     </div>
     <div id="about" class="container-fluid px-0">
-      <h3 class="text-center mt-5 pt-5">나에 대해서</h3>
+      <h3 class="text-center mt-5 pt-5 fs-2">나에 대해서</h3>
       <p class="text-center mt-4 mb-5">나는 코딩을 좋아한다.</p>
-      <div class="container">
+      <div class="container pb-5">
         <div class="basic">
           <p>
             We have created a fictional "personal" website/blog, and our
@@ -111,30 +111,42 @@
         <div class="skill">
           <p class="text-center my-5">저는 다음 분야에 정말 능숙합니다.</p>
           <div class="inner">
-            <p>Front-end</p>
-            <div class="progressbar">
-              <div><span>85%</span></div>
+            <p class="ls10px">Front-end</p>
+            <div class="progress rounded-0">
+              <div class="progress-bar bg-info">
+                <span>85%</span>
+              </div>
             </div>
-            <p>Back-end</p>
-            <div class="progressbar">
-              <div><span>95%</span></div>
+            <p class="ls10px">Back-end</p>
+            <div class="progress rounded-0">
+              <div class="progress-bar bg-info">
+                <span>95%</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="container-fluid bg-info count py-5">
+      <div class="container-fluid bg-secondary count py-5">
         <ul class="row text-center py-2 list-unstyled">
-          <li class="col"><span>3+</span>Partners</li>
-          <li class="col"><span>3+</span>Project Done</li>
-          <li class="col"><span>20+</span>Total Page</li>
-          <li class="col"><span>2+</span>National technical certification</li>
+          <li class="col text-white">
+            <span class="fs-2 d-block">3+</span>Partners
+          </li>
+          <li class="col text-white">
+            <span class="fs-2 d-block">3+</span>Project Done
+          </li>
+          <li class="col text-white">
+            <span class="fs-2 d-block">20+</span>Total Page
+          </li>
+          <li class="col text-white">
+            <span class="fs-2 d-block">2+</span>National technical certification
+          </li>
         </ul>
       </div>
     </div>
     <div id="work" class="container-fluid px-0 pb-5">
       <div class="parallax-bg position-relative">
         <h2
-          class="position-absolute start-50 top-50 translate-middle text-white"
+          class="position-absolute start-50 top-50 translate-middle text-white ls10px display-6"
         >
           PORTFOLIO
         </h2>
@@ -146,7 +158,7 @@
       </p>
       <div class="container">
         <ul class="portfolio row list-unstyled">
-          <li class="col">
+          <li class="col position-relative motion">
             <a href="#"
               ><img
                 class="w-100 h-100 object-fit-cover"
@@ -154,7 +166,7 @@
                 alt="팀 작품"
             /></a>
           </li>
-          <li class="col">
+          <li class="col position-relative motion">
             <a href="/jfs/project/" target="_blank"
               ><img
                 class="w-100 h-100 object-fit-cover"
@@ -162,7 +174,7 @@
                 alt="개인 따라하기 작품"
             /></a>
           </li>
-          <li class="col">
+          <li class="col position-relative motion">
             <a href="#"
               ><img
                 class="w-100 h-100 object-fit-cover"
@@ -170,7 +182,7 @@
                 alt="개인 스스로 작품"
             /></a>
           </li>
-          <li class="col">
+          <li class="col position-relative motion">
             <a href="#"
               ><img
                 class="w-100 h-100 object-fit-cover"
@@ -180,7 +192,11 @@
           </li>
         </ul>
         <div class="text-center py-5">
-          <button type="button" id="shadow" class="btn btn-outline-danger">
+          <button
+            type="button"
+            id="shadow"
+            class="btn btn-outline-danger px-4 rounded-1"
+          >
             더보기
           </button>
         </div>
@@ -189,14 +205,14 @@
     <div id="contact" class="container-fluid px-0 pb-5">
       <div class="parallax-bg position-relative">
         <h2
-          class="position-absolute start-50 top-50 translate-middle text-white"
+          class="position-absolute start-50 top-50 translate-middle text-white ls10px display-6"
         >
           CONTACT
         </h2>
       </div>
       <h3 class="text-center mt-5 pt-5">내가 일하는 곳</h3>
       <p class="text-center mt-4 mb-5">여러분의 피드백을 기다리고 있습니다!</p>
-      <div class="container">
+      <div class="container pb-5 mb-5">
         <div class="row">
           <div class="col map">
             <!-- 구글 지도 -->
@@ -244,7 +260,10 @@
                 placeholder="메시지를 기록하세요."
               ></textarea>
               <div class="frm-btn">
-                <button type="submit" class="btn btn-outline-danger">
+                <button
+                  type="submit"
+                  class="btn btn-outline-danger px-4 rounded-1"
+                >
                   <i class="fa-solid fa-paper-plane"></i>메시지 보내기
                 </button>
               </div>
@@ -255,30 +274,37 @@
     </div>
     <footer class="container-fluid bg-dark text-white text-center py-5">
       <div class="top-btn">
-        <a class="text-white" href="#top"
+        <a
+          class="text-white btn btn-outline-secondary px-4 rounded-1"
+          href="#top"
           ><i class="fa-solid fa-arrow-up"></i>To the top</a
         >
       </div>
-      <div class="sns">
+      <div class="sns my-4">
         <a class="text-white" href="#"
-          ><i class="fa-brands fa-square-facebook"></i
+          ><i class="fs-2 fa-brands fa-square-facebook"></i
         ></a>
         <a class="text-white" href="#"
-          ><i class="fa-brands fa-instagram"></i
+          ><i class="fs-2 fa-brands fa-instagram"></i
         ></a>
         <a class="text-white" href="#"
-          ><i class="fa-brands fa-square-snapchat"></i
+          ><i class="fs-2 fa-brands fa-square-snapchat"></i
         ></a>
         <a class="text-white" href="#"
-          ><i class="fa-brands fa-pinterest-p"></i
+          ><i class="fs-2 fa-brands fa-pinterest-p"></i
         ></a>
-        <a class="text-white" href="#"><i class="fa-brands fa-twitter"></i></a>
         <a class="text-white" href="#"
-          ><i class="fa-brands fa-linkedin-in"></i
+          ><i class="fs-2 fa-brands fa-twitter"></i
+        ></a>
+        <a class="text-white" href="#"
+          ><i class="fs-2 fa-brands fa-linkedin-in"></i
         ></a>
       </div>
       <p>&copy; 2025 JMJ. All rights reserved.</p>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    <script src="./js/scrollMotion.js"></script>
     <script src="./js/clock.js"></script>
     <script src="./js/dark.js"></script>
   </body>
