@@ -7,22 +7,19 @@ $(window).scroll(function () {
     pos = 0,
     offset = 1;
 
-  // 오른쪽 상단에 스크롤 양과 창 높이 값 출력
-  console.log(windowScrollTop + " , " + windowHeight);
-
   const motions = $(".motion");
 
-  if (windowScrollTop > windowHeight / offset) {
-    //참일 경우
-    // i는 0, 1, 2, 3
-    for (let i = 0; i < motions.length; i++) {
-      motions
-        .eq(i)
+  motions.each((i, el) => {
+    const $el = $(el);
+    const topVar = $el.css("top").slice(0, -2);
+    const y = $el.offset().top - topVar;
+
+    if (windowScrollTop > y - windowHeight / offset) {
+      $el
         .stop()
         .animate({ top: pos, opacity: 1 }, (speed * (i + 1)) / 2, easing);
+    } else {
+      $el.stop().animate({ top: pos + 600, opacity: 0 }, speed, easing);
     }
-  } else {
-    //거짓일 경우
-    motions.stop().animate({ top: pos + 600, opacity: 0 }, speed, easing);
-  }
+  });
 });
