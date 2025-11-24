@@ -6,7 +6,7 @@ document
     let form = e.target;
     let data = new FormData(form);
 
-    let response = await fetch("https://formspree.io/f/mrbjykgb", {
+    let response = await fetch("https://formspree.io/f/xgvbwydv", {
       method: "POST",
       body: data,
       headers: { Accept: "application/json" },
