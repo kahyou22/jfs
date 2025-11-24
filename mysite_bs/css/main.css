@@ -20,12 +20,12 @@
 }
 
 #home .bgimg {
-  background: url(/jfs/assets/img/light.jpg) no-repeat 50% 50% / cover fixed;
+  background: url(../assets/img/light.jpg) no-repeat 50% 50% / cover fixed;
 }
 
 #home.dark .bgimg {
   filter: brightness(40%);
-  background-image: url(/jfs/assets/img/dark.jpg);
+  background-image: url(../assets/img/dark.jpg);
 }
 
 .parallax-bg {
@@ -34,16 +34,16 @@
 }
 
 #about .parallax-bg {
-  background-image: url(/jfs/assets/img/bg-about.jpg);
+  background-image: url(../assets/img/bg-about.jpg);
   background-position: 50% 70%;
 }
 
 #work .parallax-bg {
-  background-image: url(/jfs/assets/img/parallax2.jpg);
+  background-image: url(../assets/img/parallax2.jpg);
 }
 
 #contact .parallax-bg {
-  background-image: url(/jfs/assets/img/parallax3.jpg);
+  background-image: url(../assets/img/parallax3.jpg);
   background-position: 50% 100%;
 }
 
@@ -62,12 +62,43 @@
   }
 }
 
-#header nav {
+#header {
+  background: transparent;
+  transition: 0.3s;
+}
+#header a {
+  color: #eee;
+  transition: 0.3s;
+}
+#header a:hover {
+  color: #fff;
+}
+#header.active {
+  background: #fff;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+#header.active a {
+  color: #222;
+  transition: 0.3s;
+}
+#header.active a:hover {
+  color: #111;
 }
 
 #home.dark h2 {
   text-shadow: 1px 1px 5px red, 0 0 25px red, 0 0 35px red;
+}
+
+#counter {
+  transform: translateY(56px);
+}
+
+#about::before,
+#work::before,
+#contact::before {
+  display: block;
+  content: "";
+  height: 56px;
 }
 
 .myimg {

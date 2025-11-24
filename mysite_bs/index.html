@@ -13,15 +13,15 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.min.js"></script>
-    <!-- <link rel="stylesheet" href="/jfs/css/reset.css" /> -->
-    <link rel="stylesheet" href="/jfs/css/main.css" />
-    <link rel="stylesheet" href="/jfs/css/gh.css" />
+    <!-- <link rel="stylesheet" href="./css/reset.css" /> -->
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/gh.css" />
   </head>
   <body>
-    <header id="header" class="container-fluid p-0">
-      <nav class="navbar navbar-expand-sm bg-light fixed-top">
+    <header id="header" class="container-fluid p-0 fixed-top">
+      <nav class="navbar navbar-expand-sm">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#home">Home</a>
+          <a class="navbar-brand text-danger" href="#home">Home</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -94,7 +94,7 @@
               <div class="myimg">
                 <img
                   class="w-100 h-100 object-fit-cover"
-                  src="/jfs/assets/img/avatar_hat.jpg"
+                  src="./assets/img/avatar_hat.jpg"
                   alt="나"
                 />
               </div>
@@ -132,7 +132,7 @@
           </div>
         </div>
       </div>
-      <div class="container-fluid bg-secondary count py-5">
+      <div id="counter" class="container-fluid bg-secondary count py-5">
         <ul class="row text-center py-2 list-unstyled">
           <li class="col text-white">
             <span class="fs-2 d-block">3+</span>Partners
@@ -168,15 +168,15 @@
             <a href="#"
               ><img
                 class="w-100 h-100 object-fit-cover"
-                src="/jfs/assets/img/p1.jpg"
+                src="./assets/img/p1.jpg"
                 alt="팀 작품"
             /></a>
           </li>
           <li class="col position-relative motion">
-            <a href="/jfs/project/" target="_blank"
+            <a href="./project/" target="_blank"
               ><img
                 class="w-100 h-100 object-fit-cover"
-                src="/jfs/assets/img/project2_thumb.png"
+                src="./assets/img/project2_thumb.png"
                 alt="개인 따라하기 작품"
             /></a>
           </li>
@@ -184,7 +184,7 @@
             <a href="#"
               ><img
                 class="w-100 h-100 object-fit-cover"
-                src="/jfs/assets/img/p3.jpg"
+                src="./assets/img/p3.jpg"
                 alt="개인 스스로 작품"
             /></a>
           </li>
@@ -192,7 +192,7 @@
             <a href="#"
               ><img
                 class="w-100 h-100 object-fit-cover"
-                src="/jfs/assets/img/p4.jpg"
+                src="./assets/img/p4.jpg"
                 alt="준비중..."
             /></a>
           </li>
@@ -201,9 +201,9 @@
           <button
             type="button"
             id="shadow"
-            class="btn btn-outline-danger px-4 rounded-1"
+            class="btn btn-danger px-4 rounded-1 position-relative"
           >
-            더보기
+            프로젝트 내용 보기
           </button>
         </div>
       </div>
@@ -286,7 +286,7 @@
                 <button
                   id="btnForm"
                   type="submit"
-                  class="btn btn-secondary px-3 rounded-1 col-4"
+                  class="btn btn-dark px-3 rounded-1 col-4"
                 >
                   <i class="fa-solid fa-paper-plane me-2"></i>메시지 보내기
                 </button>

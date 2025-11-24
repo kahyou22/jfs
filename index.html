@@ -18,10 +18,10 @@
     <link rel="stylesheet" href="./css/gh.css" />
   </head>
   <body>
-    <header id="header" class="container-fluid p-0">
-      <nav class="navbar navbar-expand-sm bg-light fixed-top">
+    <header id="header" class="container-fluid p-0 fixed-top">
+      <nav class="navbar navbar-expand-sm">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#home">Home</a>
+          <a class="navbar-brand text-danger" href="#home">Home</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -132,7 +132,7 @@
           </div>
         </div>
       </div>
-      <div class="container-fluid bg-secondary count py-5">
+      <div id="counter" class="container-fluid bg-secondary count py-5">
         <ul class="row text-center py-2 list-unstyled">
           <li class="col text-white">
             <span class="fs-2 d-block">3+</span>Partners
@@ -201,9 +201,9 @@
           <button
             type="button"
             id="shadow"
-            class="btn btn-outline-danger px-4 rounded-1"
+            class="btn btn-danger px-4 rounded-1 position-relative"
           >
-            더보기
+            프로젝트 내용 보기
           </button>
         </div>
       </div>
@@ -286,7 +286,7 @@
                 <button
                   id="btnForm"
                   type="submit"
-                  class="btn btn-secondary px-3 rounded-1 col-4"
+                  class="btn btn-dark px-3 rounded-1 col-4"
                 >
                   <i class="fa-solid fa-paper-plane me-2"></i>메시지 보내기
                 </button>

@@ -5,7 +5,7 @@ $(window).scroll(function () {
   const speed = 1000,
     easing = "easeOutExpo",
     pos = 0,
-    offset = 1;
+    offset = 2.5;
 
   const motions = $(".motion");
 
@@ -14,12 +14,18 @@ $(window).scroll(function () {
     const topVar = $el.css("top").slice(0, -2);
     const y = $el.offset().top - topVar;
 
-    if (windowScrollTop > y - windowHeight / offset) {
+    if (windowScrollTop > y - windowHeight * offset) {
       $el
         .stop()
         .animate({ top: pos, opacity: 1 }, (speed * (i + 1)) / 2, easing);
     } else {
       $el.stop().animate({ top: pos + 600, opacity: 0 }, speed, easing);
+    }
+
+    if (windowScrollTop > 0) {
+      $("#header").addClass("active");
+    } else {
+      $("#header").removeClass("active");
     }
   });
 });
