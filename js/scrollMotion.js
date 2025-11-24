@@ -5,7 +5,7 @@ $(window).scroll(function () {
   const speed = 1000,
     easing = "easeOutExpo",
     pos = 0,
-    offset = 2.5;
+    offset = 1;
 
   const motions = $(".motion");
 
