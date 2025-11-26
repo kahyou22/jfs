@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>카운터</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+      $(() => {
+        function startCounter(selector) {
+          const $el = $(selector);
+
+          const targetCount = parseInt($el.attr("data-count"));
+          const interval = parseInt($el.attr("data-interval")) || 50;
+          const duration =
+            parseInt($el.attr("data-duration")) || targetCount * interval;
+          const step = targetCount / (duration / interval);
+
+          let count = 0;
+
+          const counterId = setInterval(() => {
+            count += step;
+
+            if (count >= targetCount) {
+              clearInterval(counterId);
+              count = targetCount;
+            }
+
+            $el.text(Math.floor(count));
+          }, interval);
+        }
+
+        $("[data-count]").each((i, el) => {
+          const $el = $(el);
+
+          function scroller() {
+            const windowHeight = $(window).height();
+            let windowScrollTop = $(window).scrollTop();
+            const y = $el.offset().top;
+
+            if (windowScrollTop > y - windowHeight) {
+              $(window).off("scroll", scroller);
+              startCounter(el);
+            }
+          }
+
+          $(window).scroll(scroller);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div style="height: 100vh"></div>
+    <h3>duration</h3>
+    <p><span data-count="55" data-duration="1000">0</span>+</p>
+    <p><span data-count="25" data-duration="1000">0</span>+</p>
+    <p><span data-count="20" data-duration="1000">0</span>+</p>
+    <p><span data-count="35" data-duration="1000">0</span>+</p>
+    <hr />
+    <h3>interval</h3>
+    <p><span data-count="55" data-interval="50">0</span>+</p>
+    <p><span data-count="25" data-interval="50">0</span>+</p>
+    <p><span data-count="20" data-interval="50">0</span>+</p>
+    <p><span data-count="35" data-interval="50">0</span>+</p>
+    <hr />
+    <h3>duration+interval</h3>
+    <p>
+      <span data-count="55" data-duration="5000" data-interval="1000">0</span>+
+    </p>
+    <p>
+      <span data-count="25" data-duration="5000" data-interval="1000">0</span>+
+    </p>
+    <p>
+      <span data-count="20" data-duration="5000" data-interval="1000">0</span>+
+    </p>
+    <p>
+      <span data-count="35" data-duration="5000" data-interval="1000">0</span>+
+    </p>
+  </body>
+</html>
