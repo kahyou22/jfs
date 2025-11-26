@@ -16,9 +16,8 @@
           function counter() {
             count++;
 
-            if (count >= targetCount) {
+            if (count == targetCount) {
               clearInterval(counterId);
-              count = targetCount;
             }
 
             $el.text(Math.floor(count));

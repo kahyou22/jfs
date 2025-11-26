@@ -21,9 +21,8 @@
           function counter() {
             count++;
 
-            if (count >= targetCount) {
+            if (count == targetCount) {
               clearInterval(counterId);
-              count = targetCount;
             }
 
             $("[data-count]").eq(i).text(Math.floor(count));
