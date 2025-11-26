@@ -35,16 +35,18 @@
 
           function scroller() {
             const windowHeight = $(window).height();
-            let windowScrollTop = $(window).scrollTop();
+            const scrollTop = $(window).scrollTop();
             const y = $el.offset().top;
+            const h = $el.outerHeight();
 
-            if (windowScrollTop > y - windowHeight) {
+            if (scrollTop > y - windowHeight && scrollTop < y + h) {
               $(window).off("scroll", scroller);
               startCounter(el);
             }
           }
 
           $(window).scroll(scroller);
+          scroller();
         });
       });
     </script>
