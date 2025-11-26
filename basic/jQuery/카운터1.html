@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>카운터</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+      $(() => {
+        $("[data-count]").each((i, el) => {
+          const $el = $(el);
+          const targetCount = parseInt($el.attr("data-count"));
+
+          let count = 0;
+
+          function counter() {
+            count++;
+
+            if (count >= targetCount) {
+              clearInterval(counterId);
+              count = targetCount;
+            }
+
+            $el.text(Math.floor(count));
+          }
+
+          const counterId = setInterval(counter, 50);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p><span data-count="55">0</span>+</p>
+    <p><span data-count="25">0</span>+</p>
+    <p><span data-count="20">0</span>+</p>
+    <p><span data-count="35">0</span>+</p>
+  </body>
+</html>

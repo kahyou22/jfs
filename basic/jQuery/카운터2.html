@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>카운터</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+      $(() => {
+        function startCounter(selector) {
+          const $el = $(selector);
+
+          const targetCount = parseInt($el.attr("data-count"));
+          const delay = parseInt($el.attr("data-delay")) || 50;
+          const duration =
+            parseInt($el.attr("data-duration")) || targetCount * delay;
+
+          let count = 0;
+
+          function counter() {
+            count += targetCount / (duration / delay);
+
+            if (count >= targetCount) {
+              clearInterval(counterId);
+              count = targetCount;
+            }
+
+            $el.text(Math.floor(count));
+          }
+
+          const counterId = setInterval(counter, delay);
+        }
+
+        $("[data-count]").each((i, el) => {
+          startCounter(el);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h3>duration</h3>
+    <p><span data-count="55" data-duration="1000">0</span>+</p>
+    <p><span data-count="25" data-duration="1000">0</span>+</p>
+    <p><span data-count="20" data-duration="1000">0</span>+</p>
+    <p><span data-count="35" data-duration="1000">0</span>+</p>
+    <hr />
+    <h3>delay</h3>
+    <p><span data-count="55" data-delay="50">0</span>+</p>
+    <p><span data-count="25" data-delay="50">0</span>+</p>
+    <p><span data-count="20" data-delay="50">0</span>+</p>
+    <p><span data-count="35" data-delay="50">0</span>+</p>
+  </body>
+</html>
