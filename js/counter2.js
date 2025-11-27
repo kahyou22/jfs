@@ -11,7 +11,7 @@ $(() => {
   }
 
   function viewIf(selector, enterCallback, leaveCallback) {
-    let joined = false; // 화면 안에 들어오면 true, 아니면 false
+    let joined = !isInView(selector); // 화면 안에 들어오면 true, 아니면 false
 
     function scroller() {
       if (isInView(selector)) {
@@ -138,5 +138,14 @@ $(() => {
         $el.stop().animate({ top: pos + h, opacity: 0 }, speed, easing);
       }
     );
+  });
+
+  $(window).scroll(function () {
+    let scrollTop = $(window).scrollTop();
+    if (scrollTop > 0) {
+      $("#header").addClass("active");
+    } else {
+      $("#header").removeClass("active");
+    }
   });
 });
