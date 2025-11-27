@@ -89,7 +89,7 @@
   text-shadow: 1px 1px 5px red, 0 0 25px red, 0 0 35px red;
 }
 
-#counter {
+#counterWrap {
   transform: translateY(56px);
 }
 
@@ -117,6 +117,18 @@
 
 .progress:last-of-type .progress-bar {
   width: 95%;
+}
+
+.counter {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.counter::after {
+  content: "+";
+}
+
+.counter.active {
+  opacity: 1;
 }
 
 .map {

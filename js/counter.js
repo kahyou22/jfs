@@ -33,6 +33,7 @@ $(() => {
 
       if (scrollTop > y - windowHeight && scrollTop < y + h) {
         $(window).off("scroll", scroller);
+        $el.addClass("active");
         startCounter(el);
       }
     }
