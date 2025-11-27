@@ -11,7 +11,9 @@ $(() => {
   }
 
   function viewIf(selector, enterCallback, leaveCallback) {
-    let joined = !isInView(selector); // 화면 안에 들어오면 true, 아니면 false
+    // 화면 안에 들어오면 true, 아니면 false지만
+    // 초기 처음 불러왔을때 콜백 실행을 하기 위해서 반대되는 값으로 세팅
+    let joined = !isInView(selector);
 
     function scroller() {
       if (isInView(selector)) {
