@@ -26,7 +26,7 @@ $(() => {
         leaveCallback();
       }
     }
-    $(window).scroll(scroller);
+    $(window).scroll($.throttle(100, scroller));
     scroller();
   }
 
@@ -59,7 +59,28 @@ $(() => {
     return null;
   }
 
-  $("[data-count]").each((i, el) => {
+  $(".progress-bar [data-count]").each((i, el) => {
+    const $el = $(el);
+    const $bar = $el.parent();
+    let counterId = null;
+
+    viewIf(
+      el,
+      () => {
+        counterId = startCounter(el, (count) => {
+          $bar.css("width", count + "%");
+          $el.text(count + "%");
+        });
+      },
+      () => {
+        counterId = cancelCounter(counterId);
+        $bar.css("width", "0%");
+        $el.text("0%");
+      }
+    );
+  });
+
+  $("#counterWrap [data-count]").each((i, el) => {
     const $el = $(el);
     let counterId = null;
 
