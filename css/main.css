@@ -101,6 +101,11 @@
   height: 56px;
 }
 
+.basic p {
+  text-align: justify;
+  word-break: break-all;
+}
+
 .myimg {
   width: 425px;
   height: 280px;
@@ -131,6 +136,10 @@
   opacity: 1;
 }
 
+.portfolio li {
+  aspect-ratio: 9/6;
+}
+
 .map {
   height: 160px;
 }
@@ -151,5 +160,6 @@ textarea {
 }
 
 #btnForm {
-  width: 28%;
+  /* width: 28%; */
+  width: auto;
 }
