@@ -177,30 +177,6 @@ $(() => {
     );
   });
 
-  // (() => {
-  //   const container = $("#about .basic");
-  //   const easing = "easeOutExpo";
-  //   const speed = 2000;
-
-  //   viewIf(
-  //     container,
-  //     () => {
-  //       $(".motion").each((i, el) => {
-  //         const $el = $(el);
-  //         $el
-  //           .stop()
-  //           .animate({ top: 0, opacity: 1 }, (speed * (i + 1)) / 2, easing);
-  //       });
-  //     },
-  //     () => {
-  //       $(".motion").each((i, el) => {
-  //         const $el = $(el);
-  //         $el.stop().animate({ top: 1000, opacity: 0 }, speed, easing);
-  //       });
-  //     }
-  //   );
-  // })();
-
   $("#work .motion").each((i, el) => {
     const $el = $(el);
     const speed = 1000,
