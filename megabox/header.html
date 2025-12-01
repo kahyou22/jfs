@@ -101,9 +101,11 @@
       #gnb .main {
         display: flex;
         justify-content: space-evenly;
+        /* align-content: flex-end; */
       }
 
       #gnb .main a {
+        position: relative;
         font-size: 1.125rem;
       }
 
@@ -115,8 +117,39 @@
         margin-left: 300px;
       }
 
+      #gnb .main > li:not(:nth-of-type(5)) > a:hover::after {
+        position: absolute;
+        bottom: -14px;
+        transform: translateX(-100%);
+        content: "";
+        width: 100%;
+        height: 3px;
+        background: #fff;
+      }
+
+      #gnb .main > li:hover > .sub {
+        display: flex;
+      }
+
       #gnb .sub {
+        /* display: flex; */
+        position: absolute;
+        padding-top: 30px;
+        transform: translateX(-25%);
         display: none;
+        text-wrap: nowrap;
+      }
+
+      #gnb .sub li {
+        margin: 0 8px;
+      }
+
+      #gnb .sub a {
+        font-size: 0.9375rem;
+      }
+
+      #gnb .sub a:hover {
+        text-decoration: underline;
       }
     </style>
   </head>
