@@ -194,6 +194,9 @@ $(() => {
       },
       () => {
         $el.stop().animate({ top: pos + h, opacity: 0 }, speed, easing);
+      },
+      {
+        offsetTop: h / 4,
       }
     );
   });
