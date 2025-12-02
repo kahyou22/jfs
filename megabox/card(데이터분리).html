@@ -153,36 +153,40 @@
       // datas.forEach(함수);
       // datas.forEach(function(){});
       // datas.forEach(([요소], [인덱스], [배열])=>{});
-      datas.forEach(data=>{
+      datas.forEach((data) => {
+        const like = data.like >= 1000 ? data.like / 1000 + "k" : data.like;
 
-          const card = `<div class="box_office_card">
-          <div class="inner">
+        const card = `
+          <div class="box_office_card">
+            <div class="inner">
               <div class="front">
-                  <span class="rank">${data.rank}</span>
-                  <div class="poster">
-                      <img src="${data.poster}" alt="쥬토피아">
-                  </div>
-                  <div class="screen_type">
-                      <img src="${}" alt="mega mx4d">
-                      <img src="${}" alt="dolby cinema">
-                      <img src="${}" alt="dolby atmos">
-                  </div>
-                  <div class="grade">
-                      <img src="${}" alt="Grade All">
-                  </div>
+                <span class="rank">${data.rank}</span>
+                <div class="poster">
+                  <img src="${data.poster}" alt="${data.title}">
+                </div>
+                <div class="screen_type">
+                  ${data.screenTypes
+                    .map((src) => `<img src="${src}" alt="Screen Types">`)
+                    .join("")}
+                </div>
+                <div class="grade">
+                  <img src="${data.grade}" alt="Grade ${data.age}">
+                </div>
               </div><!-- //.front -->
               <div class="back">
-                  <p>${}</p>
-                  <div class="score">관람평<span>${}</span></div>
+                <p>${data.description}</p>
+                <div class="score">관람평<span>${data.score}</span></div>
               </div><!-- //.back -->
-          </div><!-- //.inner -->
-          <!-- btn -->
-          <div class="btn">
-              <button type="button" class="like"><i class="fa-regular fa-heart"></i>3.6k</button>
+            </div><!-- //.inner -->
+            <!-- btn -->
+            <div class="btn">
+              <button type="button" class="like"><i class="fa-regular fa-heart"></i>${like}</button>
               <a href="" class="reservation_link">예매</a>
+            </div>
           </div>
-      </div>`
+        `;
 
+        $(".box_office").append(card);
       }); // forEach()
     </script>
   </body>
