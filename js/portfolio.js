@@ -28,7 +28,7 @@ datas.forEach((data) => {
               <span class="worktype text-center">${taskIcon}${data.task}</span>
               <a href="${
                 data.siteurl
-              }" class="btn btn-info site_link text-white">사이트 바로가기</a>
+              }" class="btn btn-primary site_link text-white">사이트 바로가기</a>
             </div>
           </div>
         `;
