@@ -25,7 +25,8 @@
 
 /* top menu */
 #header .top_link {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   justify-content: space-between;
 }
 
@@ -140,7 +141,8 @@ h2 {
   transform: scale(2.3, 2.3);
 }
 .link {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   background: rgba(0, 0, 0, 0.5);
   margin: 50px 0;
   padding: 25px 0;
@@ -216,7 +218,8 @@ h2 {
 
 /* Box Office Card UI */
 .box_office {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 40px;
 }
 
