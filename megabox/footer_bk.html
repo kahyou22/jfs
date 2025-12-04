@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MEET PLAY SHARE, 메가박스</title>
+    <style>
+      @import "css/reset.css";
+
+      #footer {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 30px;
+        height: 200px;
+        font-size: 13px;
+        background-color: rgb(248, 248, 250);
+      }
+
+      #footer a {
+        color: #666;
+      }
+
+      #footer .top {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 1100px;
+      }
+      #footer .top ul {
+        display: flex;
+        gap: 14px;
+      }
+
+      #footer .find {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        padding: 0 20px;
+        height: 30px;
+        border: 1px solid #d8d9db;
+        border-radius: 30px;
+      }
+
+      #footer .bottom {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 1100px;
+        color: #666;
+      }
+
+      #footer .left {
+        display: flex;
+        gap: 20px;
+      }
+
+      #footer .logo {
+        background-image: url(images/logo-opacity_new2.png);
+        width: 150px;
+        height: 50px;
+      }
+
+      #footer .sns {
+        display: flex;
+        gap: 5px;
+        height: 30px;
+      }
+
+      #footer .find-menu-wrapper {
+        position: absolute;
+        bottom: 200px;
+        content: "";
+        display: flex;
+        justify-content: center;
+        padding: 50px 0;
+        width: 100%;
+        min-height: 200px;
+        background-color: #333;
+        color: #fff;
+      }
+
+      #footer .find-menu {
+        position: relative;
+        width: 100%;
+        max-width: 1100px;
+        height: 100%;
+      }
+
+      #footer h2 {
+        font-weight: 400;
+      }
+
+      #footer .locations-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 1100px;
+      }
+
+      #footer .close {
+        position: absolute;
+        top: 0px;
+        right: 50px;
+        background-image: url(images/btn-footer-theater-close.png);
+        width: 36px;
+        height: 36px;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="height: calc(100vh - 200px); background-color: #fff"></div>
+    <footer id="footer">
+      <div class="find-menu-wrapper">
+        <div class="find-menu">
+          <div class="close"></div>
+          <div class="locations-wrapper">
+            <h2>메가박스 극장 찾기</h2>
+            <div class="locations">
+              <ul>
+                <li>
+                  <p>서울</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="top">
+        <ul>
+          <li><a href="#">회사소개</a></li>
+          <li><a href="#">인재채용</a></li>
+          <li><a href="#">사회공헌</a></li>
+          <li><a href="#">제휴/광고/부대사업문의</a></li>
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">위치기반서비스 이용약관</a></li>
+          <li><a href="#">개인정보처리방침</a></li>
+          <li><a href="#">윤리경영</a></li>
+        </ul>
+        <a href="#" class="find"><i class="fa-solid fa-search"></i>극장 찾기</a>
+      </div>
+      <div class="bottom">
+        <div class="left">
+          <div class="logo"></div>
+          <div class="address">
+            <ul>
+              <li>
+                서울특별시 강남구 테헤란로 87길 22 도심공항터미널 건물 408호 ARS
+                1544-0070 대표이메일 m.dreamcenter@partner.megabox.co.kr
+              </li>
+              <li>
+                대표자명 홍정인, 남용석 · 개인정보보호책임자 김수현 ·
+                사업자등록번호 211-86-59478 · 통신판매업신고번호
+                2025-서울강남-00722
+              </li>
+              <li>COPYRIGHT © MegaboxJoongAng, Inc. All rights reserved</li>
+            </ul>
+          </div>
+        </div>
+        <ul class="sns">
+          <li>
+            <a href="#"><img src="images/ico-youtubeN.png" alt="유튜브" /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="images/ico-instagramN.png" alt="인스타그램"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="images/ico-facebookN.png" alt="페이스북"
+            /></a>
+          </li>
+          <li>
+            <a href="#"><img src="images/ico-twitterN.png" alt="트위터" /></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $("#footer .find").click((e) => {
+        $("#footer .find-menu-wrapper").toggle();
+      });
+
+      $("footer .close").click((e) => {
+        $("#footer .find-menu-wrapper").hide();
+      });
+    </script>
+  </body>
+</html>
