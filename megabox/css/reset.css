@@ -59,6 +59,7 @@ img {
 input {
   background: transparent;
   border: none;
+  outline: none;
 }
 
 ::placeholder {
