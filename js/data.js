@@ -8,7 +8,7 @@ const datas = [
     task: 4,
     description: [],
     worktime: "240H",
-    siteurl: "#",
+    siteurl: "",
   },
   {
     rank: 2,
@@ -31,7 +31,7 @@ const datas = [
     task: 1,
     description: ["준비중..."],
     worktime: "240H",
-    siteurl: "#",
+    siteurl: "",
   },
   {
     rank: 4,
@@ -40,6 +40,6 @@ const datas = [
     task: 1,
     description: ["준비중..."],
     worktime: "240H",
-    siteurl: "#",
+    siteurl: "",
   },
 ];

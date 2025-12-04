@@ -208,6 +208,11 @@
   /* line-height: 34px; */
 }
 
+.site_link[href=""] {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
 /* y축 회전 */
 .portfolio .inner {
   position: relative;
