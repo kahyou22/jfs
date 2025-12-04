@@ -6,6 +6,127 @@
     <title>MEET PLAY SHARE, 메가박스</title>
     <link rel="stylesheet" href="css/reset.css" />
     <style>
+      #section {
+        color: #fff;
+      }
+
+      .ibox {
+        max-width: 1100px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      h2 {
+        display: inline-block;
+        border-bottom: 1px solid #555;
+        font-size: 1rem;
+        font-weight: 400;
+      }
+
+      .more {
+        text-align: right;
+        margin-bottom: 16px;
+      }
+
+      .more a {
+        color: #ccc;
+      }
+
+      .more i {
+        margin-left: 8px;
+        transform: scale(2.3);
+        font-weight: 300;
+      }
+
+      .link {
+        display: flex;
+        margin: 50px 0;
+        padding: 25px 0;
+        background: rgba(0, 0, 0, 0.5);
+      }
+
+      .link li {
+        position: relative;
+        width: 275px;
+        text-align: center;
+      }
+
+      .link li:not(:last-of-type)::after {
+        position: absolute;
+        content: "";
+        width: 1px;
+        height: 100%;
+        display: inline-block;
+        margin-left: 90px;
+        background: rgba(255, 255, 255, 0.3);
+      }
+
+      .link li:first-of-type::after {
+        margin-left: 40px;
+      }
+
+      .link .search input {
+        color: #fff;
+      }
+
+      .link .search {
+        position: relative;
+        display: inline-block;
+        width: 70%;
+        padding-bottom: 8px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        text-align: left;
+      }
+
+      .link .search::before {
+        position: absolute;
+        top: 4px;
+        right: 0px;
+        content: "";
+        display: inline-block;
+        background: url(images/ico-search-white.png) no-repeat;
+        width: 18px;
+        height: 18px;
+      }
+
+      .link .search input::placeholder {
+        font-size: 0.9375rem;
+        color: #ccc;
+      }
+
+      .link img {
+        width: 25px;
+        height: 25px;
+        object-fit: contain;
+        margin-right: 8px;
+      }
+
+      .link span {
+        vertical-align: middle;
+      }
+
+      .mouse {
+        text-align: center;
+      }
+
+      .mouse span {
+        display: inline-block;
+        width: 16px;
+        animation: mouse 2s ease infinite;
+      }
+
+      @keyframes mouse {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+
       .box_office {
         display: flex;
         gap: 40px;
@@ -95,7 +216,8 @@
       /* y축 회전 */
       .inner {
         position: relative;
-        height: 352px;
+        /* height: 352px; */
+        aspect-ratio: 73/105;
         /* 원근감 */
         perspective: 1000px;
       }
@@ -142,41 +264,50 @@
   </head>
 
   <body>
-    <h2>박스오피스</h2>
-    <div>
-      <a href="https://www.megabox.co.kr/movie"
-        >더 많은 영화보기 <i class="fa-solid fa-plus"></i
-      ></a>
-    </div>
-    <!-- Card UI(카드 UI) -->
-    <div class="box_office"></div>
-    <div><input type="text" placeholder="영화명을 입력해 주세요" /></div>
-    <ul>
-      <li>
-        <a href="https://www.megabox.co.kr/booking/timetable"
-          ><img
-            src="images/ico-schedule-white.png"
-            alt="상영시간표"
-          />상영시간표</a
-        >
-      </li>
-      <li>
-        <a href="https://www.megabox.co.kr/movie"
-          ><img
-            src="images/ico-boxoffice-main.png"
-            alt="박스오피스"
-          />박스오피스</a
-        >
-      </li>
-      <li>
-        <a href="https://www.megabox.co.kr/booking"
-          ><img
-            src="images/ico-quick-reserve-main.png"
-            alt="빠른예매"
-          />빠른예매</a
-        >
-      </li>
-    </ul>
+    <section id="section">
+      <div class="ibox">
+        <h2>박스오피스</h2>
+        <div class="more">
+          <a href="https://www.megabox.co.kr/movie"
+            >더 많은 영화보기 <i class="fa-solid fa-plus"></i
+          ></a>
+        </div>
+        <!-- Card UI(카드 UI) -->
+        <div class="box_office"></div>
+        <ul class="link">
+          <li>
+            <span class="search"
+              ><input type="text" placeholder="영화명을 입력해 주세요"
+            /></span>
+          </li>
+          <li>
+            <a href="https://www.megabox.co.kr/booking/timetable"
+              ><img src="images/ico-schedule-main.png" alt="상영시간표" /><span
+                >상영시간표</span
+              ></a
+            >
+          </li>
+          <li>
+            <a href="https://www.megabox.co.kr/movie"
+              ><img src="images/ico-boxoffice-main.png" alt="박스오피스" /><span
+                >박스오피스</span
+              ></a
+            >
+          </li>
+          <li>
+            <a href="https://www.megabox.co.kr/booking"
+              ><img
+                src="images/ico-quick-reserve-main.png"
+                alt="빠른예매"
+              /><span>빠른예매</span></a
+            >
+          </li>
+        </ul>
+        <div class="mouse">
+          <span><img src="images/ico-mouse.png" alt="아래로" /></span>
+        </div>
+      </div>
+    </section>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="js/data.js"></script>
