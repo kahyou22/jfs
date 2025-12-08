@@ -3,15 +3,15 @@
 const datas = [
   {
     rank: 1,
-    poster: "images/YiSbqEf6OvFcDoLoQCipDojOHqMCwKG4_420.jpg",
+    poster: "/images/YiSbqEf6OvFcDoLoQCipDojOHqMCwKG4_420.jpg",
     title: "주토피아",
     screenTypes: [
-      "images/type_mega_mx4d.png",
-      "images/type_dolbycinema.png",
-      "images/type_dolbyatmos.png",
+      "/images/type_mega_mx4d.png",
+      "/images/type_dolbycinema.png",
+      "/images/type_dolbyatmos.png",
     ],
-    grade: "images/ALL_56x56.png",
-    age: "ALL",
+    grade: "/images/ALL_56x56.png",
+    age: "All",
     like: 3600,
     description:
       "더 화려해진 세계, 더 넓어진 주토피아!<br>디즈니의 가~~장 사랑스러운 콤비 '주디'와 '닉'이 돌아온다!<br><br>미스터리한 뱀 '게리'가 나타난 순간,",
@@ -19,10 +19,10 @@ const datas = [
   },
   {
     rank: 2,
-    poster: "images/fIwkU2Lnmv8AZzLk9gDbdlhDNSk2WFy6_420.jpg",
+    poster: "/images/fIwkU2Lnmv8AZzLk9gDbdlhDNSk2WFy6_420.jpg",
     title: "반지의 제왕",
-    screenTypes: ["images/type_mega_mx4d.png"],
-    grade: "images/15_56x56.png",
+    screenTypes: ["/images/type_mega_mx4d.png"],
+    grade: "/images/15_56x56.png",
     age: "12",
     like: 1300,
     description:
@@ -31,10 +31,10 @@ const datas = [
   },
   {
     rank: 3,
-    poster: "images/QbA0Xu2pYIIskq4gziFxbiq6eL9N2i0w_420.jpg",
+    poster: "/images/QbA0Xu2pYIIskq4gziFxbiq6eL9N2i0w_420.jpg",
     title: "정보원",
     screenTypes: [],
-    grade: "images/15_56x56.png",
+    grade: "/images/15_56x56.png",
     age: "15",
     like: 142,
     description:
@@ -43,10 +43,10 @@ const datas = [
   },
   {
     rank: 4,
-    poster: "images/nsOm6ZHz6sFsfDNiZXluV3aEw4ymvmHm_420.jpg",
+    poster: "/images/nsOm6ZHz6sFsfDNiZXluV3aEw4ymvmHm_420.jpg",
     title: "윗집사람들",
     screenTypes: [],
-    grade: "images/19_112x112.png",
+    grade: "/images/19_112x112.png",
     age: "19",
     like: 238,
     description:
