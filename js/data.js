@@ -26,7 +26,7 @@ const datas = [
   },
   {
     rank: 3,
-    poster: "https://megabox-js.netlify.app",
+    poster: "./assets/img/project3_thumb.png",
     title: "메가박스",
     task: 1,
     description: ["준비중..."],
