@@ -26,12 +26,12 @@ const datas = [
   },
   {
     rank: 3,
-    poster: "https://www.dummyimage.com/200x300/000/fff&text=preparing...",
-    title: "메가커피",
+    poster: "https://megabox-js.netlify.app",
+    title: "메가박스",
     task: 1,
     description: ["준비중..."],
-    worktime: "240H",
-    siteurl: "",
+    worktime: "16H",
+    siteurl: "https://megabox-js.netlify.app",
   },
   {
     rank: 4,

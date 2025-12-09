@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MEET PLAY SHARE, 메가박스</title>
+    <link rel="icon" href="/favicon.png" />
     <link rel="stylesheet" href="/css/theater.css" />
   </head>
 
@@ -13,9 +14,9 @@
       <div class="inner">
         <!-- logo -->
         <h1 id="logo">
-          <a href="/index.html"
+          <a href="/"
             ><img
-              src="/images/logo-white_new2.png"
+              src="/images/logo_new2.png"
               alt="MEGABOX 메인으로 가기"
               title="MEGABOX 메인으로 가기"
           /></a>
@@ -69,7 +70,7 @@
                 <li>
                   <a href="https://www.megabox.co.kr/theater/list">전체극장</a>
                 </li>
-                <li><a href="/sub/specialtheater.html">특별관</a></li>
+                <li><a href="/sub/specialtheater">특별관</a></li>
               </ul>
             </li>
             <li>
@@ -116,24 +117,27 @@
           <div class="left_link">
             <a href="#"
               ><img
-                src="/images/ico-sitemap-white.png"
+                src="/images/specialtheater/ico-sitemap.png"
                 alt="사이트맵"
                 title="사이트맵"
             /></a>
             <a href="#"
-              ><img src="/images/ico-search-white.png" alt="검색" title="검색"
+              ><img
+                src="/images/specialtheater/ico-search.png"
+                alt="검색"
+                title="검색"
             /></a>
           </div>
           <div class="right_link">
             <a href="https://www.megabox.co.kr/booking/timetable"
               ><img
-                src="/images/ico-schedule-white.png"
+                src="/images/specialtheater/ico-schedule.png"
                 alt="상영시간표"
                 title="상영시간표"
             /></a>
             <a href="#"
               ><img
-                src="/images/ico-mymega-white.png"
+                src="/images/specialtheater/ico-mymega.png"
                 alt="나의 메가박스"
                 title="나의 메가박스"
             /></a>
@@ -143,6 +147,17 @@
       <!-- //.inner -->
     </header>
     <!-- //header -->
+
+    <!-- breadcrumb -->
+    <div class="page_util">
+      <div class="inner">
+        <div class="breadcrumb">
+          <i class="fa-solid fa-house"></i>
+          <a href="https://www.megabox.co.kr/theater/list">극장</a>
+          <a href="/sub/specialtheater">특별관</a>
+        </div>
+      </div>
+    </div>
 
     <!-- section -->
     <section id="section">
@@ -233,15 +248,15 @@
           </div>
         </div>
         <!-- //comfort -->
+
+        <!-- top button -->
+        <div class="tothetop">
+          <a href="#top"
+            ><img src="/images/specialtheater/btn-go-top.png" alt="위로 가기"
+          /></a>
+        </div>
       </div>
       <!-- //.inner -->
-
-      <!-- top button -->
-      <div>
-        <a href="#top"
-          ><img src="/images/specialtheater/btn-go-top.png" alt="위로 가기"
-        /></a>
-      </div>
     </section>
     <!-- //#section -->
 
@@ -318,8 +333,7 @@
 
     <!-- 제이쿼리 라이브러리 -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <!-- 데이터 파일 -->
-    <script src="/js/data.js"></script>
-    <script src="/js/main.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/special.js"></script>
   </body>
 </html>

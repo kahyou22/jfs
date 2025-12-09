@@ -1,4 +1,6 @@
 // main.js
+const formatCount = (num) =>
+  num >= 1000 ? (num / 1000).toFixed(1) + "k" : num;
 
 // Movie Card UI
 $(datas).each((idx, data) => {
@@ -20,25 +22,19 @@ $(datas).each((idx, data) => {
           </div>
         </div><!-- //.front -->
         <div class="back">
-          <p>${data.description}</p>
+          <p class="description">${data.description}</p>
           <div class="score">관람평<span>${data.score}</span></div>
         </div><!-- //.back -->
       </div><!-- //.inner -->
       <!-- btn -->
       <div class="btn">
-        <button type="button" class="like"><i class="fa-regular fa-heart"></i>${data.like}</button>
+        <button type="button" class="like"><i class="fa-regular fa-heart"></i>${formatCount(
+          data.like
+        )}</button>
         <a href="" class="reservation_link">예매</a>
       </div>
     </div>
-`;
+  `;
 
   $(".box_office").append(card);
 }); // each()
-
-// footer - looking for theater
-$(".btn_looking_theater").on("click", () => {
-  $(".theater").addClass("active");
-});
-$(".closed").on("click", () => {
-  $(".theater").removeClass("active");
-});
