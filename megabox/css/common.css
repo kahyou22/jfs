@@ -37,6 +37,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  scroll-behavior: smooth;
+}
+
 body,
 h1,
 h2,
@@ -90,7 +94,17 @@ address {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-#header .inner {
+#header.active::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 48px;
+  left: 0;
+  top: 98px;
+  background: #339eb2;
+}
+
+.inner {
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -101,6 +115,7 @@ address {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  z-index: 9999;
 }
 
 /* top menu */
@@ -165,14 +180,14 @@ address {
   grid-template-columns: repeat(3, auto);
 }
 /* 메인 메뉴 호버시 하단의 바 */
-#gnb .main > li:not(:nth-of-type(5)) > a:hover::after {
+#gnb .main > li:not(:nth-of-type(5)):hover > a::after {
   position: absolute;
-  bottom: -14px;
+  bottom: -22px;
   transform: translateX(-100%);
   content: "";
   width: 100%;
   height: 3px;
-  background: #fff;
+  background: #339eb2;
 }
 
 /* 2depth */
@@ -185,9 +200,9 @@ address {
   text-wrap: nowrap;
 }
 #gnb .sub li {
-  margin: 0 8px;
 }
 #gnb .sub a {
+  padding: 0 8px;
   font-size: 0.9375rem;
 }
 #gnb .sub a:hover {
