@@ -1,41 +1,27 @@
 // header 2depth background
-// $(".main li:not(:nth-of-type(5)").mouseenter(function () {
-//   $("#header").addClass("active");
-//   $(this).find(".sub").addClass("active");
-// });
-// $(".main > li").mouseleave(() => {
-//   $("#gnb .sub").removeClass("active");
-// });
-// $("#header .subbar").mouseenter(() => {
-//   $(".main > li").find(".sub").addClass("active");
-// });
-// $("#header .subbar").mouseleave(() => {
-//   $("#header").removeClass("active");
-//   $(".main > li").find(".sub").removeClass("active");
-// });
-
-$(".main > li:not(:nth-of-type(5)").mouseenter((e) => {
-  $(".sub").removeClass("active");
-  const target = $(e.currentTarget);
-  target.addClass("active");
-  target.find(".sub").addClass("active");
-  $("#header").addClass("active");
+// :not(:nth-of-type(5)
+// -> 스토어 메뉴는 하위 메뉴가 없으므로 제외
+$(".main > li:not(:nth-of-type(5)").mouseenter(e => {
+    $(e.currentTarget).find(".sub").addClass("active");
+    $("#header").addClass("active");
 });
 
-$(".main > li").mouseleave((e) => {
-  const target = $(e.currentTarget);
-  target.removeClass("active");
+$(".main > li").mouseleave(() => {
+    $("#header").removeClass("active");
+    $('.sub').removeClass("active");
 });
 
-$("#header .subbar").mouseleave((e) => {
-  $("#header").removeClass("active");
-  $(".sub").removeClass("active");
+$("#header .subbar").mouseenter(() => {
+    $("#header").addClass("active");
+});
+$("#header .subbar").mouseleave(() => {
+    $("#header").removeClass("active");
 });
 
 // footer - looking for theater
 $(".btn_looking_theater").on("click", () => {
-  $(".theater").addClass("active");
+    $(".theater").addClass("active");
 });
 $(".closed").on("click", () => {
-  $(".theater").removeClass("active");
+    $(".theater").removeClass("active");
 });
